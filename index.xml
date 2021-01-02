@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>A Kreee&#39;s Server (Mirror)</title>
+    <link>/</link>
+    <description>Recent content on A Kreee&#39;s Server (Mirror)</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 02 Jan 2021 18:29:46 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何下载并使用Zerotier</title>
+      <link>/posts/how-to-use-zerotier/</link>
+      <pubDate>Sat, 02 Jan 2021 18:29:46 +0800</pubDate>
+      
+      <guid>/posts/how-to-use-zerotier/</guid>
+      <description>教程建设中……</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>/posts/hello-world/</link>
+      <pubDate>Sat, 02 Jan 2021 18:18:19 +0800</pubDate>
+      
+      <guid>/posts/hello-world/</guid>
+      <description>Hello world my friends!
+Prepare to enter a new dimension!</description>
+    </item>
+    
+    <item>
+      <title>Error！💔</title>
+      <link>/error-page/</link>
+      <pubDate>Sat, 02 Jan 2021 16:21:52 +0800</pubDate>
+      
+      <guid>/error-page/</guid>
+      <description>这是什么？ 该网页仅是建立在 Github Pages 上的镜像网页，本质上不提供主页上所列的特定服务。 如需访问原始网页，请参考 FAQ/如何连接至服务器 部分。</description>
+    </item>
+    
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>/faq/</link>
+      <pubDate>Sat, 02 Jan 2021 16:21:52 +0800</pubDate>
+      
+      <guid>/faq/</guid>
+      <description>这是什么？ 该网页仅是建立在 Github Pages 上的镜像网页，本质上不提供主页上所列的特定服务。 如需访问非镜像网页，请参考 FAQ/如何连接至服务器 部分。 原服务</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>/about-me/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/about-me/</guid>
+      <description>我是Kreee Bilibili UP主页 Steam主页</description>
+    </item>
+    
+  </channel>
+</rss>
