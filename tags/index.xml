@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on A Kreee&#39;s Server (Mirror)</title>
+    <title>Tags on A Kreee&#39;s Server</title>
     <link>https://ohmykreee.github.io/tags/</link>
-    <description>Recent content in Tags on A Kreee&#39;s Server (Mirror)</description>
+    <description>Recent content in Tags on A Kreee&#39;s Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 02 Jan 2021 18:29:46 +0800</lastBuildDate><atom:link href="https://ohmykreee.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Jan 2021 22:39:28 +0800</lastBuildDate><atom:link href="https://ohmykreee.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tutorials</title>
       <link>https://ohmykreee.github.io/tags/tutorials/</link>
-      <pubDate>Sat, 02 Jan 2021 18:29:46 +0800</pubDate>
+      <pubDate>Sun, 03 Jan 2021 22:39:28 +0800</pubDate>
       
       <guid>https://ohmykreee.github.io/tags/tutorials/</guid>
       <description></description>
