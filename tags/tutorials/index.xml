@@ -6,23 +6,32 @@
     <description>Recent content in Tutorials on A Kreee&#39;s Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 04 Jan 2021 09:55:15 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.tk/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jan 2021 21:49:54 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.tk/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何使用FTP服务</title>
+      <link>https://www.ohmykreee.tk/posts/how-to-ues-ftp/</link>
+      <pubDate>Mon, 04 Jan 2021 21:49:54 +0800</pubDate>
+      
+      <guid>https://www.ohmykreee.tk/posts/how-to-ues-ftp/</guid>
+      <description>目录 在电脑上使用 在手机上使用 在电脑上使用 有两种方式： 直接在系统文件管理器处输入 ftp://IP地址或者域名 在浏览器中直接输入： ftp://用</description>
+    </item>
+    
     <item>
       <title>如何下载并安装Mumble</title>
       <link>https://www.ohmykreee.tk/posts/how-to-install-mumble/</link>
       <pubDate>Mon, 04 Jan 2021 09:55:15 +0800</pubDate>
       
       <guid>https://www.ohmykreee.tk/posts/how-to-install-mumble/</guid>
-      <description>教程建设中……</description>
+      <description>目录 安装到电脑 安装到安卓手机 安装到苹果手机 安装到电脑 点击 此处 前往下载页面。 在截图中红框内可选择对应操作系统，并下载安装包。 以下演示内容系统为</description>
     </item>
     
     <item>
-      <title>进阶使用网页应用</title>
+      <title>进阶使用服务</title>
       <link>https://www.ohmykreee.tk/posts/advanced-connect/</link>
       <pubDate>Sun, 03 Jan 2021 22:39:28 +0800</pubDate>
       
       <guid>https://www.ohmykreee.tk/posts/advanced-connect/</guid>
-      <description>教程建设中……</description>
+      <description>由于众所周知的原因，Kreee并不推荐各位使用该网页提供的在线服务使用服务器所提供的服务，而是强烈推荐自行准备相应客户端并访问相应服务。 关于</description>
     </item>
     
     <item>

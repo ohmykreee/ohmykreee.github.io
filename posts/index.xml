@@ -5,8 +5,40 @@
 		<description>Recent content in Posts on A Kreee&#39;s Server</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-cn</language>
-		<lastBuildDate>Mon, 04 Jan 2021 09:55:15 +0800</lastBuildDate>
+		<lastBuildDate>Mon, 04 Jan 2021 21:49:54 +0800</lastBuildDate>
 		<atom:link href="https://www.ohmykreee.tk/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>如何使用FTP服务</title>
+			<link>https://www.ohmykreee.tk/posts/how-to-ues-ftp/</link>
+			<pubDate>Mon, 04 Jan 2021 21:49:54 +0800</pubDate>
+			
+			<guid>https://www.ohmykreee.tk/posts/how-to-ues-ftp/</guid>
+			<description>目录 在电脑上使用 在手机上使用 在电脑上使用 有两种方式： 直接在系统文件管理器处输入 ftp://IP地址或者域名 在浏览器中直接输入： ftp://用</description>
+			<content type="html"><![CDATA[<hr>
+<h1 id="目录">目录</h1>
+<ul>
+<li><a href="#%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E4%BD%BF%E7%94%A8">在电脑上使用</a></li>
+<li><a href="#%E5%9C%A8%E6%89%8B%E6%9C%BA%E4%B8%8A%E4%BD%BF%E7%94%A8">在手机上使用</a></li>
+</ul>
+<hr>
+<h1 id="在电脑上使用">在电脑上使用</h1>
+<p>有两种方式：</p>
+<ol>
+<li>直接在系统文件管理器处输入 ftp://<code>IP地址或者域名</code></li>
+</ol>
+<p><img src="/images/how-to-use-ftp-01.jpg" alt=""></p>
+<ol start="2">
+<li>在浏览器中直接输入： ftp://<code>用户名，默认Anonymous</code>:<code>密码，默认留空</code>@<code>IP地址或者域名</code>:<code>端口，默认21</code>/ 。例如 <a href="ftp://Anonymous:@ct4.ohmykreee.tk">ftp://Anonymous:@ct4.ohmykreee.tk</a>:21/</li>
+</ol>
+<hr>
+<h1 id="在手机上使用">在手机上使用</h1>
+<ol>
+<li>安装一个好用的 FTP 应用。</li>
+<li>直接在浏览器器中输入：ftp://<code>用户名，默认Anonymous</code>:<code>密码，默认留空</code>@<code>IP地址或者域名</code>:<code>端口，默认21</code>/ 。是否成功视所用浏览器是否支持 FTP 协议。</li>
+</ol>
+]]></content>
+		</item>
 		
 		<item>
 			<title>如何下载并安装Mumble</title>
@@ -14,19 +46,66 @@
 			<pubDate>Mon, 04 Jan 2021 09:55:15 +0800</pubDate>
 			
 			<guid>https://www.ohmykreee.tk/posts/how-to-install-mumble/</guid>
-			<description>教程建设中……</description>
-			<content type="html"><![CDATA[<p>教程建设中……</p>
+			<description>目录 安装到电脑 安装到安卓手机 安装到苹果手机 安装到电脑 点击 此处 前往下载页面。 在截图中红框内可选择对应操作系统，并下载安装包。 以下演示内容系统为</description>
+			<content type="html"><![CDATA[<hr>
+<h1 id="目录">目录</h1>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85%E5%88%B0%E7%94%B5%E8%84%91">安装到电脑</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E5%88%B0%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA">安装到安卓手机</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E5%88%B0%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA">安装到苹果手机</a></li>
+</ul>
+<hr>
+<h1 id="安装到电脑">安装到电脑</h1>
+<p>点击 <a href="https://www.mumble.info/downloads/">此处</a> 前往下载页面。</p>
+<p><img src="/images/how-to-install-mumble-01.jpg" alt=""></p>
+<p>在截图中红框内可选择对应操作系统，并下载安装包。<br>
+以下演示内容系统为 Windows 10 x64， Mumble 版本 1.3.3 。</p>
+<p>使用默认设置安装即可。</p>
+<p><img src="/images/how-to-install-mumble-02.jpg" alt=""></p>
+<p>首次启动可能会进行音频设置向导，请根据指示操作，或关闭窗口以跳过。</p>
+<p><img src="/images/how-to-install-mumble-03.jpg" alt=""></p>
+<p>点击红框初打开服务器列表。</p>
+<p><img src="/images/how-to-install-mumble-04.jpg" alt=""></p>
+<p>点击“添加”添加服务器。</p>
+<p><img src="/images/how-to-install-mumble-05.jpg" alt=""></p>
+<p>填写服务器地址（请参考 <a href="/faq/#%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E8%87%B3%E6%9C%8D%E5%8A%A1%E5%99%A8">FAQ/如何连接至服务器</a> ）、用户名等信息。点击 OK 。</p>
+<p><img src="/images/how-to-install-mumble-06.jpg" alt=""></p>
+<p>双击刚刚创建的服务器，进入服务器。</p>
+<p><img src="/images/how-to-install-mumble-07.jpg" alt=""></p>
+<hr>
+<h1 id="安装到安卓手机">安装到安卓手机</h1>
+<p>点击 <a href="https://f-droid.org/packages/se.lublin.mumla/">此处</a> 前往下载页面。<br>
+滚动页面至较下部，找到红框所框下载处（请确保所下版本为最新版）。</p>
+<p><img src="/images/how-to-install-mumble-08.jpg" alt=""></p>
+<p>安装应用。首次打开请按照指示生成证书（用于确保用户唯一性）。</p>
+<p><img src="/images/how-to-install-mumble-09.jpg" alt=""></p>
+<p>点击右上角的加号，添加服务器。</p>
+<p><img src="/images/how-to-install-mumble-10.jpg" alt=""></p>
+<p>填写服务器地址（请参考 <a href="/faq/#%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E8%87%B3%E6%9C%8D%E5%8A%A1%E5%99%A8">FAQ/如何连接至服务器</a> ）、用户名等信息。点击“添加”。</p>
+<p><img src="/images/how-to-install-mumble-11.jpg" alt=""></p>
+<p>打开刚刚创建的服务器，进入服务器。</p>
+<hr>
+<h1 id="安装到苹果系统">安装到苹果系统</h1>
+<p>请在 App Store 搜索 Mumble，并安装。<br>
+配置请参考 <a href="#%E5%AE%89%E8%A3%85%E5%88%B0%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA">安装到安卓手机</a> 。</p>
 ]]></content>
 		</item>
 		
 		<item>
-			<title>进阶使用网页应用</title>
+			<title>进阶使用服务</title>
 			<link>https://www.ohmykreee.tk/posts/advanced-connect/</link>
 			<pubDate>Sun, 03 Jan 2021 22:39:28 +0800</pubDate>
 			
 			<guid>https://www.ohmykreee.tk/posts/advanced-connect/</guid>
-			<description>教程建设中……</description>
-			<content type="html"><![CDATA[<p>教程建设中……</p>
+			<description>由于众所周知的原因，Kreee并不推荐各位使用该网页提供的在线服务使用服务器所提供的服务，而是强烈推荐自行准备相应客户端并访问相应服务。 关于</description>
+			<content type="html"><![CDATA[<p>由于众所周知的原因，Kreee并不推荐各位使用该网页提供的在线服务使用服务器所提供的服务，而是强烈推荐自行准备相应客户端并访问相应服务。</p>
+<p>关于如何下载并安装Mumble客户端，请参考文章： <a href="/posts/how-to-install-mumble">如何下载并安装Mumble</a><br>
+关于如何使用客户端访问FTP，请参考文章： <a href="/posts/how-to-use-ftp">如何使用FTP服务</a></p>
+<p>访问服务的地址/IP地址可在 <a href="/faq/#%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E8%87%B3%E6%9C%8D%E5%8A%A1%E5%99%A8">FAQ/如何连接至服务器</a> 部分获得。<br>
+Mumble 默认端口： <code>64738</code><br>
+FTP 默认端口： <code>21</code><br>
+服务器 Dashboard 默认端口： <code>????</code><br>
+Minecraft 默认端口： <code>25565</code></p>
 ]]></content>
 		</item>
 		
