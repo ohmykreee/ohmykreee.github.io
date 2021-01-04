@@ -2,72 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>A Kreee&#39;s Server</title>
-    <link>https://ohmykreee.github.io/</link>
+    <link>https://www.ohmykreee.tk/</link>
     <description>Recent content on A Kreee&#39;s Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 03 Jan 2021 22:39:28 +0800</lastBuildDate><atom:link href="https://ohmykreee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jan 2021 09:55:15 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.tk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何下载并安装Mumble</title>
+      <link>https://www.ohmykreee.tk/posts/how-to-install-mumble/</link>
+      <pubDate>Mon, 04 Jan 2021 09:55:15 +0800</pubDate>
+      
+      <guid>https://www.ohmykreee.tk/posts/how-to-install-mumble/</guid>
+      <description>教程建设中……</description>
+    </item>
+    
     <item>
       <title>!!Unfinshed!!</title>
-      <link>https://ohmykreee.github.io/unfinshed/</link>
+      <link>https://www.ohmykreee.tk/unfinshed/</link>
       <pubDate>Sun, 03 Jan 2021 23:30:22 +0800</pubDate>
       
-      <guid>https://ohmykreee.github.io/unfinshed/</guid>
+      <guid>https://www.ohmykreee.tk/unfinshed/</guid>
       <description>讨厌，都被客官您给看光了(ノω&amp;lt;。)ノ))☆.。</description>
     </item>
     
     <item>
       <title>进阶使用网页应用</title>
-      <link>https://ohmykreee.github.io/posts/advanced-connect/</link>
+      <link>https://www.ohmykreee.tk/posts/advanced-connect/</link>
       <pubDate>Sun, 03 Jan 2021 22:39:28 +0800</pubDate>
       
-      <guid>https://ohmykreee.github.io/posts/advanced-connect/</guid>
+      <guid>https://www.ohmykreee.tk/posts/advanced-connect/</guid>
       <description>教程建设中……</description>
     </item>
     
     <item>
-      <title>Ready To Open a New Dimension?❤️</title>
-      <link>https://ohmykreee.github.io/ready-to/</link>
+      <title>Ready To Open a New Dimension?🌌</title>
+      <link>https://www.ohmykreee.tk/ready-to/</link>
       <pubDate>Sun, 03 Jan 2021 22:18:54 +0800</pubDate>
       
-      <guid>https://ohmykreee.github.io/ready-to/</guid>
-      <description>该页面所列连接方法均为使用域名连接。 如需了解进阶使用方法（如使用IP地址连接），请参考文章： 进阶使用网页应用 Mumble 客户端网页版（首次访问较慢） 使</description>
+      <guid>https://www.ohmykreee.tk/ready-to/</guid>
+      <description>该页面所列连接方法均为使用域名连接。 如需了解进阶使用方法（如使用IP地址连接），请参考文章： 进阶使用网页应用 首次打开网页应用，加载时间可能会</description>
     </item>
     
     <item>
       <title>如何下载并使用Zerotier</title>
-      <link>https://ohmykreee.github.io/posts/how-to-use-zerotier/</link>
+      <link>https://www.ohmykreee.tk/posts/how-to-use-zerotier/</link>
       <pubDate>Sat, 02 Jan 2021 18:29:46 +0800</pubDate>
       
-      <guid>https://ohmykreee.github.io/posts/how-to-use-zerotier/</guid>
+      <guid>https://www.ohmykreee.tk/posts/how-to-use-zerotier/</guid>
       <description>教程建设中……</description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>https://ohmykreee.github.io/posts/hello-world/</link>
+      <link>https://www.ohmykreee.tk/posts/hello-world/</link>
       <pubDate>Sat, 02 Jan 2021 18:18:19 +0800</pubDate>
       
-      <guid>https://ohmykreee.github.io/posts/hello-world/</guid>
+      <guid>https://www.ohmykreee.tk/posts/hello-world/</guid>
       <description>Hello world my friends!
 Prepare to enter a new dimension!</description>
     </item>
     
     <item>
       <title>Frequently Asked Questions</title>
-      <link>https://ohmykreee.github.io/faq/</link>
+      <link>https://www.ohmykreee.tk/faq/</link>
       <pubDate>Sat, 02 Jan 2021 16:21:52 +0800</pubDate>
       
-      <guid>https://ohmykreee.github.io/faq/</guid>
+      <guid>https://www.ohmykreee.tk/faq/</guid>
       <description>这是什么？ 这是一个被托管在 Github Pages 上的网页，主要提供网页应用和连接服务器指南。 如需了解其他连接服务器的方法，请参考 FAQ/如何连接至服务器 部分。</description>
     </item>
     
     <item>
       <title>About Me</title>
-      <link>https://ohmykreee.github.io/about-me/</link>
+      <link>https://www.ohmykreee.tk/about-me/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://ohmykreee.github.io/about-me/</guid>
+      <guid>https://www.ohmykreee.tk/about-me/</guid>
       <description>我是Kreee Bilibili UP主页 Steam主页</description>
     </item>
     

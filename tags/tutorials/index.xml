@@ -2,26 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorials on A Kreee&#39;s Server</title>
-    <link>https://ohmykreee.github.io/tags/tutorials/</link>
+    <link>https://www.ohmykreee.tk/tags/tutorials/</link>
     <description>Recent content in Tutorials on A Kreee&#39;s Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 03 Jan 2021 22:39:28 +0800</lastBuildDate><atom:link href="https://ohmykreee.github.io/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jan 2021 09:55:15 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.tk/tags/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何下载并安装Mumble</title>
+      <link>https://www.ohmykreee.tk/posts/how-to-install-mumble/</link>
+      <pubDate>Mon, 04 Jan 2021 09:55:15 +0800</pubDate>
+      
+      <guid>https://www.ohmykreee.tk/posts/how-to-install-mumble/</guid>
+      <description>教程建设中……</description>
+    </item>
+    
     <item>
       <title>进阶使用网页应用</title>
-      <link>https://ohmykreee.github.io/posts/advanced-connect/</link>
+      <link>https://www.ohmykreee.tk/posts/advanced-connect/</link>
       <pubDate>Sun, 03 Jan 2021 22:39:28 +0800</pubDate>
       
-      <guid>https://ohmykreee.github.io/posts/advanced-connect/</guid>
+      <guid>https://www.ohmykreee.tk/posts/advanced-connect/</guid>
       <description>教程建设中……</description>
     </item>
     
     <item>
       <title>如何下载并使用Zerotier</title>
-      <link>https://ohmykreee.github.io/posts/how-to-use-zerotier/</link>
+      <link>https://www.ohmykreee.tk/posts/how-to-use-zerotier/</link>
       <pubDate>Sat, 02 Jan 2021 18:29:46 +0800</pubDate>
       
-      <guid>https://ohmykreee.github.io/posts/how-to-use-zerotier/</guid>
+      <guid>https://www.ohmykreee.tk/posts/how-to-use-zerotier/</guid>
       <description>教程建设中……</description>
     </item>
     

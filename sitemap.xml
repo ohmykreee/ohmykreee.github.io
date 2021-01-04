@@ -3,62 +3,67 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://ohmykreee.github.io/unfinshed/</loc>
+    <loc>https://www.ohmykreee.tk/</loc>
+    <lastmod>2021-01-04T09:55:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ohmykreee.tk/posts/</loc>
+    <lastmod>2021-01-04T09:55:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ohmykreee.tk/tags/</loc>
+    <lastmod>2021-01-04T09:55:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ohmykreee.tk/tags/tutorials/</loc>
+    <lastmod>2021-01-04T09:55:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ohmykreee.tk/posts/how-to-install-mumble/</loc>
+    <lastmod>2021-01-04T09:55:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.ohmykreee.tk/unfinshed/</loc>
     <lastmod>2021-01-03T23:30:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ohmykreee.github.io/</loc>
+    <loc>https://www.ohmykreee.tk/posts/advanced-connect/</loc>
     <lastmod>2021-01-03T22:39:28+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ohmykreee.github.io/posts/</loc>
-    <lastmod>2021-01-03T22:39:28+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ohmykreee.github.io/tags/</loc>
-    <lastmod>2021-01-03T22:39:28+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ohmykreee.github.io/tags/tutorials/</loc>
-    <lastmod>2021-01-03T22:39:28+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ohmykreee.github.io/posts/advanced-connect/</loc>
-    <lastmod>2021-01-03T22:39:28+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ohmykreee.github.io/ready-to/</loc>
+    <loc>https://www.ohmykreee.tk/ready-to/</loc>
     <lastmod>2021-01-03T22:18:54+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ohmykreee.github.io/posts/how-to-use-zerotier/</loc>
+    <loc>https://www.ohmykreee.tk/posts/how-to-use-zerotier/</loc>
     <lastmod>2021-01-02T18:29:46+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ohmykreee.github.io/posts/hello-world/</loc>
+    <loc>https://www.ohmykreee.tk/posts/hello-world/</loc>
     <lastmod>2021-01-02T18:18:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ohmykreee.github.io/faq/</loc>
+    <loc>https://www.ohmykreee.tk/faq/</loc>
     <lastmod>2021-01-02T16:21:52+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ohmykreee.github.io/about-me/</loc>
+    <loc>https://www.ohmykreee.tk/about-me/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://ohmykreee.github.io/categories/</loc>
+    <loc>https://www.ohmykreee.tk/categories/</loc>
   </url>
   
 </urlset>
