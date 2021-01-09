@@ -29,7 +29,7 @@
 </ol>
 <p><img src="/images/how-to-use-ftp-01.jpg" alt=""></p>
 <ol start="2">
-<li>在浏览器中直接输入： ftp://<code>用户名，默认Anonymous</code>:<code>密码，默认留空</code>@<code>IP地址或者域名</code>:<code>端口，默认21</code>/ 。例如 <a href="ftp://Anonymous:@ct4.ohmykreee.tk">ftp://Anonymous:@ct4.ohmykreee.tk</a>:21/</li>
+<li>在浏览器中直接输入： ftp://<code>用户名，默认Anonymous</code>:<code>密码，默认留空</code>@<code>IP地址或者域名</code>:<code>端口，默认21</code>/ 。例如 <code>ftp://Anonymous:@ct4.ohmykreee.tk:21/</code></li>
 </ol>
 <hr>
 <h1 id="在手机上使用">在手机上使用</h1>
@@ -64,7 +64,7 @@
 <p><img src="/images/how-to-install-mumble-02.jpg" alt=""></p>
 <p>首次启动可能会进行音频设置向导，请根据指示操作，或关闭窗口以跳过。</p>
 <p><img src="/images/how-to-install-mumble-03.jpg" alt=""></p>
-<p>点击红框初打开服务器列表。</p>
+<p>点击红框处打开服务器列表。</p>
 <p><img src="/images/how-to-install-mumble-04.jpg" alt=""></p>
 <p>点击“添加”添加服务器。</p>
 <p><img src="/images/how-to-install-mumble-05.jpg" alt=""></p>
