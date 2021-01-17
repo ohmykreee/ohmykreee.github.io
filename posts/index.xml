@@ -5,8 +5,201 @@
 		<description>Recent content in Posts on A Kreee&#39;s Server</description>
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-cn</language>
-		<lastBuildDate>Mon, 04 Jan 2021 21:49:54 +0800</lastBuildDate>
+		<lastBuildDate>Wed, 13 Jan 2021 22:58:38 +0800</lastBuildDate>
 		<atom:link href="https://www.ohmykreee.tk/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Notes for Setting Up Back-end Server</title>
+			<link>https://www.ohmykreee.tk/posts/notes-for-setting-up-backend-server/</link>
+			<pubDate>Wed, 13 Jan 2021 22:58:38 +0800</pubDate>
+			
+			<guid>https://www.ohmykreee.tk/posts/notes-for-setting-up-backend-server/</guid>
+			<description>Install CentOS OS: CentOS 7 Minimal Summary: Date &amp;amp; Time: Shanghai Network &amp;amp; Hostname: hostname to kserver.localdomain If you want to change hostname later, use: hostnamectl set-hostname AnythingYouLike.localdomain When installing: Set a root password First run &amp;amp; install some software yum -y update yum -y install vim yum -y install net-tools yum -y install git yum -y install unzip Set up OpenSSH vim /etc/ssh/sshd_config Remove # in the following line:</description>
+			<content type="html"><![CDATA[<hr>
+<h1 id="install-centos">Install CentOS</h1>
+<p>OS: CentOS 7 Minimal</p>
+<p>Summary:</p>
+<ol>
+<li>Date &amp; Time: Shanghai</li>
+<li>Network &amp; Hostname: hostname to <code>kserver.localdomain</code><br>
+If you want to change hostname later, use:</li>
+</ol>
+<pre><code>hostnamectl set-hostname AnythingYouLike.localdomain
+</code></pre><p>When installing:</p>
+<ol>
+<li>Set a root password</li>
+</ol>
+<hr>
+<h1 id="first-run--install-some-software">First run &amp; install some software</h1>
+<pre><code>yum -y update
+yum -y install vim
+yum -y install net-tools
+yum -y install git
+yum -y install unzip
+</code></pre><hr>
+<h1 id="set-up-openssh">Set up OpenSSH</h1>
+<pre><code>vim /etc/ssh/sshd_config
+</code></pre><p>Remove <code>#</code> in the following line:</p>
+<pre><code>Port 22
+ListenAddress 0.0.0.0
+ListenAddress ::
+PermitRootLogin yes
+</code></pre><p>Start and auto-run the SSH service.</p>
+<pre><code>systemctl enable sshd.service
+systemctl start sshd.service
+</code></pre><p>View the local address:</p>
+<pre><code>ifconfig -a
+</code></pre><hr>
+<h1 id="set-up-ap--soft-router">Set up AP &amp; soft router</h1>
+<pre><code>ref: https://www.osradar.com/building-your-own-wireless-access-point-on-top-of-centos7/
+</code></pre><p>Install the wireless-tools and hostapd.</p>
+<pre><code>yum -y install iw
+yum -y install epel-release
+yum -y install hostapd
+</code></pre><p>Config hostapd.</p>
+<pre><code>vim /etc/hostapd/hostapd.conf
+</code></pre><p>Edit the conf file.</p>
+<pre><code>interface=wlp7s0
+hw_mode=g
+channel=6
+ssid=K_server
+utf8_ssid=1
+country_code=CN
+bridge=br-AP
+</code></pre><p>Remove the <code>#</code> in the following lines:</p>
+<pre><code>wpa=3
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
+wpa_passphrase=YouPassHere
+</code></pre><p>Start and auto-run the hostapd</p>
+<pre><code>systemctl start hostapd.service
+systemctl enable hostapd.service
+</code></pre><p>Change zones.</p>
+<pre><code>firewall-cmd --permanent -zone=external --change-interface=enp1s0
+firewall-cmd --permanent -zone=internal --change-interface=???
+firewall-cmd --zone=external --add-masquerade --permanent
+firewall-cmd --set-default-zone=internal
+firewall-cmd --zone=internal --add-service=dns --permanent
+firewall-cmd --complete-reload
+</code></pre><p>Set up bridge.</p>
+<pre><code>nmcli con add con-name br-AP type bridge ifname br-AP autoconnect yes stp no ip4 192.168.6.1/24
+</code></pre><p>Set up dhcp.</p>
+<pre><code>yum install -y dhcp
+vim /etc/dhcp/dhcpd.conf
+</code></pre><p>Edit the conf file.</p>
+<pre><code>subnet 192.168.6.0 netmask 255.255.255.0 {
+	range dynamic-bootp 192.168.6.200 192.168.6.250;
+	option broadcast-address 192.168.6.255;
+	option domain-name-server 223.5.5.5, 223.6.6.6;
+	option routers 192.168.6.1;
+}
+</code></pre><p>Start and auto-run the dhcp</p>
+<pre><code>systemctl start dhcpd
+systemctl enable dhcpd
+</code></pre><p>Post-setup: make it more stable.</p>
+<pre><code>yum -y install haveged
+systemctl start havaged
+systemctl enable havaged
+</code></pre><hr>
+<h1 id="set-up-web-vmstats">Set up web-vmstats</h1>
+<pre><code>cd /usr/local/
+mkdir websocketd
+git clone https://github.com/joewalnes/web-vmstats
+</code></pre><p>Copy <code>websocketd.zip</code> to the folder <code>/usr/local/websocketd/</code> and unzip it:</p>
+<pre><code>unzip websocketd.zip
+</code></pre><p>Then create <code>webvmstats.service</code>.</p>
+<pre><code>vim /etc/systemd/system/webvmstats.service
+</code></pre><p>Add the following content to the file:</p>
+<pre><code>[Unit]
+Description=Web-vmstats
+
+[Service]
+ExecStart=/usr/local/websocketd/websocketd --port=8000 --staticdir=/usr/local/web-vmstats/web/ /usr/bin/vmstat -n 1
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><p>Reload, enable and start.</p>
+<pre><code>systemctl daemon-reload
+systemctl start webvmstats.service
+systemctl enable webvmstats.service
+</code></pre><p>Add port <code>8000</code> to the firewall.</p>
+<pre><code>firewall-cmd --add-port=8000/tcp --zone=external --permanent
+firewall-cmd --add-port=8000/tcp --zone=internal --permanent
+</code></pre><p>View status:</p>
+<pre><code>systemctl status webvmstats.service -l
+</code></pre><hr>
+<h1 id="set-up-zerotier">Set up Zerotier</h1>
+<p>Use the script to install Zerotier:</p>
+<pre><code>curl -s https://install.zerotier.com | sudo bash
+</code></pre><p>Join network:</p>
+<pre><code>zerotier-cli join XXXXXXX
+</code></pre><p>Start and auto-run ZeroTier.</p>
+<pre><code>systemctl start zerotier-one.service
+systemctl enable zerotier-one.service
+</code></pre><hr>
+<h1 id="set-up-frp">Set up FRP</h1>
+<p>穷！！！不整了！！！阿里云还我一个月学生机+无限次数续费！！</p>
+<hr>
+<h1 id="set-up-mumble-server">Set up mumble server</h1>
+<pre><code>ref: https://wiki.mumble.info/wiki/Install_CentOS7
+</code></pre><hr>
+<h1 id="set-up-minecraft-server">Set up Minecraft server</h1>
+<p>Install java:</p>
+<pre><code>yum install -y java-latest-openjdk.x86_64
+</code></pre><p>Upload the server.zip to the <code>/usr/local/mc_1_16_4</code></p>
+<pre><code>mkdir /opt/mc_1_16_4
+unzip server.zip
+</code></pre><p>Create <code>mcserver.service</code> by <code>vim /etc/systemd/system/mcserver.service</code></p>
+<pre><code>[Unit]
+Description=Minecraft Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStartPre=/bin/sleep 10
+ExecStart=/usr/bin/java -jar /usr/local/mc_1_16_4/fabric-server-launch.jar nogui
+WorkingDirectory=/usr/local/mc_1_16_4/
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><p>Add port:</p>
+<pre><code>vim /etc/firewalld/services/minecraft.xml
+</code></pre><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;service&gt;
+        &lt;short&gt;Minecraft&lt;/short&gt;
+        &lt;description&gt;Minecraft Server&lt;/description&gt;
+        &lt;port protocol=&quot;tcp&quot; port=&quot;25565&quot; /&gt;
+        &lt;port protocol=&quot;udp&quot; port=&quot;25565&quot; /&gt;
+&lt;/service&gt;
+</code></pre><pre><code>vim /etc/firewalld/services/rcon.xml
+</code></pre><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;service&gt;
+        &lt;short&gt;RCON&lt;/short&gt;
+        &lt;description&gt;Minecraft RCON&lt;/description&gt;
+        &lt;port protocol=&quot;tcp&quot; port=&quot;25577&quot; /&gt;
+        &lt;port protocol=&quot;udp&quot; port=&quot;25577&quot; /&gt;
+&lt;/service&gt;
+</code></pre><pre><code>firewall-cmd --permanent --add-service=minecraft --zone=internal
+firewall-cmd --permanent --add-service=minecraft --zone=external
+firewall-cmd --permanent --add-service=rcon --zone=internal
+firewall-cmd --complete-reload
+</code></pre><hr>
+<h1 id="set-up-ftp">Set up FTP</h1>
+<p>Install the ftp-daemon</p>
+<pre><code>yum -y install vsftpd
+</code></pre><p>Edit the conf file:</p>
+<pre><code>vim /etc/vsftpd/vsftpd.conf
+</code></pre><pre><code>local_enable=NO
+listen=YES
+</code></pre><p>Open port.</p>
+<pre><code>firewall-cmd --permanent --add-service=ftp --zone=internal
+firewall-cmd --permanent --add-service=ftp --zone=external
+</code></pre><p>Start and auto-run the service.</p>
+<pre><code>systemctl start vsftpd
+systemctl enable vsftpd
+</code></pre>]]></content>
+		</item>
 		
 		<item>
 			<title>如何使用FTP服务</title>
@@ -46,13 +239,12 @@
 			<pubDate>Mon, 04 Jan 2021 09:55:15 +0800</pubDate>
 			
 			<guid>https://www.ohmykreee.tk/posts/how-to-install-mumble/</guid>
-			<description>目录 安装到电脑 安装到安卓手机 安装到苹果手机 安装到电脑 点击 此处 前往下载页面。 在截图中红框内可选择对应操作系统，并下载安装包。 以下演示内容系统为</description>
+			<description>目录 安装到电脑 安装到手机 安装到电脑 点击 此处 前往下载页面。 在截图中红框内可选择对应操作系统，并下载安装包。 以下演示内容系统为 Windows 10 x64， Mumble 版本</description>
 			<content type="html"><![CDATA[<hr>
 <h1 id="目录">目录</h1>
 <ul>
 <li><a href="#%E5%AE%89%E8%A3%85%E5%88%B0%E7%94%B5%E8%84%91">安装到电脑</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85%E5%88%B0%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA">安装到安卓手机</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85%E5%88%B0%E8%8B%B9%E6%9E%9C%E6%89%8B%E6%9C%BA">安装到苹果手机</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E5%88%B0%E6%89%8B%E6%9C%BA">安装到手机</a></li>
 </ul>
 <hr>
 <h1 id="安装到电脑">安装到电脑</h1>
@@ -73,9 +265,11 @@
 <p>双击刚刚创建的服务器，进入服务器。</p>
 <p><img src="/images/how-to-install-mumble-07.jpg" alt=""></p>
 <hr>
-<h1 id="安装到安卓手机">安装到安卓手机</h1>
-<p>点击 <a href="https://f-droid.org/packages/se.lublin.mumla/">此处</a> 前往下载页面。<br>
-滚动页面至较下部，找到红框所框下载处（请确保所下版本为最新版）。</p>
+<h1 id="安装到手机">安装到手机</h1>
+<p>苹果系统请在 App Store 搜索 Mumble，并安装。<br>
+安卓系统点击 <a href="https://f-droid.org/packages/se.lublin.mumla/">此处</a> 前往下载页面。<br>
+以下演示内容系统为安卓。</p>
+<p>滚动页面至较下部，找到红框所框下载处（请确保所下版本为最新版）。</p>
 <p><img src="/images/how-to-install-mumble-08.jpg" alt=""></p>
 <p>安装应用。首次打开请按照指示生成证书（用于确保用户唯一性）。</p>
 <p><img src="/images/how-to-install-mumble-09.jpg" alt=""></p>
@@ -84,10 +278,6 @@
 <p>填写服务器地址（请参考 <a href="/faq/#%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E8%87%B3%E6%9C%8D%E5%8A%A1%E5%99%A8">FAQ/如何连接至服务器</a> ）、用户名等信息。点击“添加”。</p>
 <p><img src="/images/how-to-install-mumble-11.jpg" alt=""></p>
 <p>打开刚刚创建的服务器，进入服务器。</p>
-<hr>
-<h1 id="安装到苹果系统">安装到苹果系统</h1>
-<p>请在 App Store 搜索 Mumble，并安装。<br>
-配置请参考 <a href="#%E5%AE%89%E8%A3%85%E5%88%B0%E5%AE%89%E5%8D%93%E6%89%8B%E6%9C%BA">安装到安卓手机</a> 。</p>
 ]]></content>
 		</item>
 		
@@ -104,19 +294,46 @@
 <p>访问服务的地址/IP地址可在 <a href="/faq/#%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E8%87%B3%E6%9C%8D%E5%8A%A1%E5%99%A8">FAQ/如何连接至服务器</a> 部分获得。<br>
 Mumble 默认端口： <code>64738</code><br>
 FTP 默认端口： <code>21</code><br>
-服务器 Dashboard 默认端口： <code>????</code><br>
+服务器 Dashboard 默认端口： <code>8000</code><br>
 Minecraft 默认端口： <code>25565</code></p>
 ]]></content>
 		</item>
 		
 		<item>
-			<title>如何下载并使用Zerotier</title>
+			<title>如何下载并使用ZeroTier</title>
 			<link>https://www.ohmykreee.tk/posts/how-to-use-zerotier/</link>
 			<pubDate>Sat, 02 Jan 2021 18:29:46 +0800</pubDate>
 			
 			<guid>https://www.ohmykreee.tk/posts/how-to-use-zerotier/</guid>
-			<description>教程建设中……</description>
-			<content type="html"><![CDATA[<p>教程建设中……</p>
+			<description>目录 安装到电脑 安装到手机 安装到电脑 点击 此处 前往下载页面并下载相应系统安装包。 以下演示内容系统为 Windows 10 x64， ZeroTier 版本 1.6.2 。 直接开始安装即可。 启动 Zerotier</description>
+			<content type="html"><![CDATA[<hr>
+<h1 id="目录">目录</h1>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85%E5%88%B0%E7%94%B5%E8%84%91">安装到电脑</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E5%88%B0%E6%89%8B%E6%9C%BA">安装到手机</a></li>
+</ul>
+<hr>
+<h1 id="安装到电脑">安装到电脑</h1>
+<p>点击 <a href="https://www.zerotier.com/download/">此处</a> 前往下载页面并下载相应系统安装包。</p>
+<p><img src="/images/how-to-use-zerotier-01.jpg" alt=""></p>
+<p>以下演示内容系统为 Windows 10 x64， ZeroTier 版本 1.6.2 。<br>
+直接开始安装即可。</p>
+<p><img src="/images/how-to-use-zerotier-02.jpg" alt=""></p>
+<p>启动 Zerotier ，在系统托盘处找到ZeroTier，右键选择 &ldquo;Join Network&rdquo;。</p>
+<p><img src="/images/how-to-use-zerotier-03.jpg" alt=""></p>
+<p>输入在 <a href="/faq/#%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E8%87%B3%E6%9C%8D%E5%8A%A1%E5%99%A8">FAQ/如何连接至服务器</a> ZeroTier部分显示的连接码，并确定。</p>
+<p><img src="/images/how-to-use-zerotier-04.jpg" alt=""></p>
+<p>使用特定 IP 地址访问服务器。IP 地址可在 <a href="/faq/#%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E8%87%B3%E6%9C%8D%E5%8A%A1%E5%99%A8">FAQ/如何连接至服务器</a> ZeroTier 部分找到</p>
+<hr>
+<h1 id="安装到手机">安装到手机</h1>
+<p>安卓系统可在 FTP 文件分享中找到安装包（可能非最新版）；<br>
+苹果手机请在 AppStore 安装 ZeroTier。<br>
+以下演示内容系统为安卓，应用版本 1.6.2-2 。</p>
+<p>点击右上角 ➕ 键。</p>
+<p><img src="/images/how-to-use-zerotier-05.jpg" alt=""></p>
+<p>输入在 <a href="/faq/#%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E8%87%B3%E6%9C%8D%E5%8A%A1%E5%99%A8">FAQ/如何连接至服务器</a> ZeroTier部分显示的连接码，并点击最下方的 “Add Network&quot; 按钮。</p>
+<p><img src="/images/how-to-use-zerotier-06.jpg" alt=""></p>
+<p>使用特定 IP 地址访问服务器。IP 地址可在 <a href="/faq/#%E5%A6%82%E4%BD%95%E8%BF%9E%E6%8E%A5%E8%87%B3%E6%9C%8D%E5%8A%A1%E5%99%A8">FAQ/如何连接至服务器</a> ZeroTier 部分找到</p>
 ]]></content>
 		</item>
 		

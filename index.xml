@@ -6,7 +6,16 @@
     <description>Recent content on A Kreee&#39;s Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 04 Jan 2021 21:49:54 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.tk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Jan 2021 22:58:38 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.tk/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes for Setting Up Back-end Server</title>
+      <link>https://www.ohmykreee.tk/posts/notes-for-setting-up-backend-server/</link>
+      <pubDate>Wed, 13 Jan 2021 22:58:38 +0800</pubDate>
+      
+      <guid>https://www.ohmykreee.tk/posts/notes-for-setting-up-backend-server/</guid>
+      <description>Install CentOS OS: CentOS 7 Minimal Summary: Date &amp;amp; Time: Shanghai Network &amp;amp; Hostname: hostname to kserver.localdomain If you want to change hostname later, use: hostnamectl set-hostname AnythingYouLike.localdomain When installing: Set a root password First run &amp;amp; install some software yum -y update yum -y install vim yum -y install net-tools yum -y install git yum -y install unzip Set up OpenSSH vim /etc/ssh/sshd_config Remove # in the following line:</description>
+    </item>
+    
     <item>
       <title>如何使用FTP服务</title>
       <link>https://www.ohmykreee.tk/posts/how-to-ues-ftp/</link>
@@ -22,7 +31,7 @@
       <pubDate>Mon, 04 Jan 2021 09:55:15 +0800</pubDate>
       
       <guid>https://www.ohmykreee.tk/posts/how-to-install-mumble/</guid>
-      <description>目录 安装到电脑 安装到安卓手机 安装到苹果手机 安装到电脑 点击 此处 前往下载页面。 在截图中红框内可选择对应操作系统，并下载安装包。 以下演示内容系统为</description>
+      <description>目录 安装到电脑 安装到手机 安装到电脑 点击 此处 前往下载页面。 在截图中红框内可选择对应操作系统，并下载安装包。 以下演示内容系统为 Windows 10 x64， Mumble 版本</description>
     </item>
     
     <item>
@@ -53,12 +62,12 @@
     </item>
     
     <item>
-      <title>如何下载并使用Zerotier</title>
+      <title>如何下载并使用ZeroTier</title>
       <link>https://www.ohmykreee.tk/posts/how-to-use-zerotier/</link>
       <pubDate>Sat, 02 Jan 2021 18:29:46 +0800</pubDate>
       
       <guid>https://www.ohmykreee.tk/posts/how-to-use-zerotier/</guid>
-      <description>教程建设中……</description>
+      <description>目录 安装到电脑 安装到手机 安装到电脑 点击 此处 前往下载页面并下载相应系统安装包。 以下演示内容系统为 Windows 10 x64， ZeroTier 版本 1.6.2 。 直接开始安装即可。 启动 Zerotier</description>
     </item>
     
     <item>
@@ -86,7 +95,7 @@ Prepare to enter a new dimension!</description>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://www.ohmykreee.tk/about-me/</guid>
-      <description>我是Kreee Bilibili UP主页 Steam主页</description>
+      <description>我是Kreee Bilibili UP主页 Steam主页 干饭人，干饭魂，干饭人都是仌！</description>
     </item>
     
   </channel>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#494f5c">
+	<meta name="msapplication-TileColor" content="#494f5c"><meta itemprop="name" content="Notes for Setting Up Back-end Server">
+<meta itemprop="description" content="Install CentOS OS: CentOS 7 Minimal Summary: Date &amp; Time: Shanghai Network &amp; Hostname: hostname to kserver.localdomain If you want to change hostname later, use: hostnamectl set-hostname AnythingYouLike.localdomain When installing: Set a root password First run &amp; install some software yum -y update yum -y install vim yum -y install net-tools yum -y install git yum -y install unzip Set up OpenSSH vim /etc/ssh/sshd_config Remove # in the following line:">
+<meta itemprop="datePublished" content="2021-01-13T22:58:38+08:00" />
+<meta itemprop="dateModified" content="2021-01-13T22:58:38+08:00" />
+<meta itemprop="wordCount" content="534">
+
+
+
+<meta itemprop="keywords" content="Notes," />
+<meta property="og:title" content="Notes for Setting Up Back-end Server" />
+<meta property="og:description" content="Install CentOS OS: CentOS 7 Minimal Summary: Date &amp; Time: Shanghai Network &amp; Hostname: hostname to kserver.localdomain If you want to change hostname later, use: hostnamectl set-hostname AnythingYouLike.localdomain When installing: Set a root password First run &amp; install some software yum -y update yum -y install vim yum -y install net-tools yum -y install git yum -y install unzip Set up OpenSSH vim /etc/ssh/sshd_config Remove # in the following line:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.ohmykreee.tk/posts/notes-for-setting-up-backend-server/" />
+<meta property="article:published_time" content="2021-01-13T22:58:38+08:00" />
+<meta property="article:modified_time" content="2021-01-13T22:58:38+08:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Notes for Setting Up Back-end Server"/>
+<meta name="twitter:description" content="Install CentOS OS: CentOS 7 Minimal Summary: Date &amp; Time: Shanghai Network &amp; Hostname: hostname to kserver.localdomain If you want to change hostname later, use: hostnamectl set-hostname AnythingYouLike.localdomain When installing: Set a root password First run &amp; install some software yum -y update yum -y install vim yum -y install net-tools yum -y install git yum -y install unzip Set up OpenSSH vim /etc/ssh/sshd_config Remove # in the following line:"/>
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>Notes for Setting Up Back-end Server</title>
+	<link rel="stylesheet" href="https://www.ohmykreee.tk/css/style.min.414ce1f9c890e5ea78db294d1fe07417fdb3f4c55a185e3137e9ed3185eadb52.css" integrity="sha256-QUzh+ciQ5ep42ylNH+B0F/2z9MVaGF4xN+ntMYXq21I=">
+	
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp faster">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://www.ohmykreee.tk">A Kreee&#39;s Server</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					<a href="https://www.ohmykreee.tk/faq/">FAQ</a>
+					<a href="https://www.ohmykreee.tk/ready-to/">Ready?</a>
+					<a href="https://www.ohmykreee.tk/posts/">Posts</a>
+					<a href="https://www.ohmykreee.tk/about-me/">About</a>
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://space.bilibili.com/361507684" target="_blank" rel="noopener" title="Bilibili"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 35 35" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bilibili"><path d="M32.280,26.876 C31.401,26.876 30.556,26.881 29.710,26.868 C29.639,26.866 29.515,26.747 29.508,26.674 C29.379,25.355 29.266,24.034 29.146,22.714 C29.034,21.487 28.918,20.260 28.804,19.033 C28.687,17.770 28.571,16.506 28.454,15.242 C28.447,15.169 28.434,15.097 28.417,14.986 C28.729,14.951 29.032,14.889 29.334,14.889 C30.155,14.888 30.975,14.910 31.795,14.929 C32.006,14.934 32.097,15.074 32.109,15.264 C32.135,15.659 32.172,16.054 32.174,16.449 C32.181,18.311 32.166,20.173 32.183,22.036 C32.197,23.523 32.247,25.010 32.280,26.497 C32.282,26.590 32.280,26.684 32.280,26.876 ZM32.048,13.515 C31.488,13.489 30.953,13.464 30.351,13.436 C30.351,11.966 30.351,10.494 30.351,8.991 C30.786,8.991 31.249,8.986 31.710,8.994 C31.942,8.998 32.060,9.088 32.056,9.360 C32.039,10.648 32.048,11.937 32.048,13.225 C32.048,13.308 32.048,13.391 32.048,13.515 ZM28.106,9.005 C28.566,9.005 29.026,9.013 29.484,9.002 C29.693,8.996 29.768,9.039 29.761,9.270 C29.744,9.889 29.769,10.509 29.771,11.129 C29.774,11.897 29.772,12.665 29.772,13.429 C29.308,13.475 28.898,13.516 28.461,13.560 C28.345,12.068 28.228,10.574 28.106,9.005 ZM27.406,25.440 C26.613,25.367 25.819,25.310 24.964,25.243 C24.234,18.029 23.615,10.733 22.197,3.480 C22.657,3.428 23.119,3.366 23.583,3.325 C24.121,3.279 24.661,3.259 25.199,3.214 C25.646,3.177 25.816,3.294 25.846,3.722 C25.928,4.868 25.999,6.015 26.079,7.162 C26.188,8.712 26.301,10.263 26.413,11.813 C26.494,12.931 26.567,14.050 26.660,15.167 C26.760,16.386 26.879,17.604 26.990,18.823 C27.072,19.723 27.148,20.624 27.238,21.523 C27.335,22.496 27.445,23.469 27.549,24.442 C27.578,24.721 27.610,25.001 27.629,25.281 C27.640,25.435 27.555,25.454 27.406,25.440 ZM22.639,19.714 C22.737,20.621 22.835,21.528 22.945,22.434 C23.062,23.405 23.195,24.374 23.319,25.343 C23.356,25.631 23.387,25.918 23.423,26.229 C22.512,26.343 21.621,26.454 20.685,26.570 C19.899,22.647 19.121,18.758 18.327,14.796 C18.970,14.707 19.595,14.608 20.222,14.536 C20.672,14.485 21.127,14.480 21.578,14.438 C21.823,14.415 21.979,14.501 22.018,14.734 C22.121,15.355 22.228,15.975 22.303,16.600 C22.428,17.636 22.526,18.676 22.639,19.714 ZM19.542,8.552 C20.051,8.544 20.559,8.531 21.066,8.532 C21.232,8.532 21.309,8.624 21.326,8.802 C21.460,10.187 21.605,11.572 21.752,13.008 C21.224,13.041 20.684,13.076 20.132,13.111 C19.935,11.588 19.742,10.101 19.542,8.552 ZM17.382,8.981 C17.876,8.909 18.367,8.830 18.859,8.768 C19.077,8.740 19.036,8.927 19.050,9.044 C19.108,9.539 19.155,10.035 19.209,10.530 C19.293,11.306 19.380,12.082 19.463,12.858 C19.474,12.960 19.464,13.064 19.464,13.175 C19.045,13.256 18.634,13.337 18.206,13.420 C17.932,11.945 17.660,10.479 17.382,8.981 ZM18.674,23.121 C18.449,23.787 17.992,24.291 17.415,24.730 C16.060,25.761 14.640,26.690 13.007,27.217 C11.863,27.586 10.675,27.866 9.484,28.045 C7.917,28.281 6.328,28.386 4.747,28.533 C4.423,28.563 4.092,28.520 3.764,28.521 C3.596,28.522 3.553,28.439 3.545,28.294 C3.503,27.589 3.468,26.883 3.405,26.179 C3.324,25.270 3.229,24.363 3.123,23.457 C2.975,22.196 2.811,20.936 2.652,19.677 C2.484,18.352 2.311,17.028 2.145,15.703 C1.982,14.406 1.836,13.106 1.664,11.810 C1.468,10.329 1.253,8.850 1.045,7.369 C0.798,5.619 0.466,3.886 0.003,2.177 C-0.018,2.102 0.046,1.942 0.110,1.917 C1.643,1.313 3.183,0.727 4.717,0.128 C5.228,-0.072 5.273,-0.129 5.273,0.495 C5.277,3.175 5.290,5.856 5.331,8.536 C5.352,9.931 5.406,11.327 5.504,12.719 C5.624,14.418 5.807,16.112 5.965,17.809 C5.972,17.881 6.004,17.951 6.017,17.994 C6.631,17.968 7.198,17.932 7.766,17.922 C10.214,17.882 12.612,18.167 14.898,19.065 C16.014,19.503 17.096,20.009 18.067,20.725 C18.865,21.312 19.039,22.041 18.674,23.121 ZM8.381,20.765 C8.613,22.424 8.843,24.070 9.081,25.771 C10.500,24.724 11.892,23.696 13.284,22.669 C13.108,22.428 9.282,20.960 8.381,20.765 Z" class="cls-1"/>
+</svg></a><a href="https://steamcommunity.com/id/kreeejiang/" target="_blank" rel="noopener" title="Steam"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 45 45" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-steam"><path d="M22.641599,17.9578129 C22.641599,17.9983104 22.641599,18.0388079 22.6436508,18.076826 L16.7943886,26.6333746 C15.846869,26.5899844 14.8960663,26.7573466 13.9945069,27.1313289 C13.5970738,27.2945587 13.2246727,27.4949802 12.8752518,27.7263946 L0.0312094084,22.4017964 C0.0313099464,22.4017964 -0.265993347,27.3255517 0.972573744,30.9951234 L10.052595,34.7680051 C10.5085042,36.819742 11.9061882,38.6194024 13.9682438,39.4851403 C17.3420132,40.9046199 21.2320146,39.2867851 22.6354436,35.8878857 C23.0006634,34.9994195 23.1709626,34.0675632 23.146341,33.1377731 L31.5156198,27.1147993 C31.5833291,27.1168654 31.6530902,27.1189317 31.7207995,27.1189317 C36.7292353,27.1189317 40.8,23.0071931 40.8,17.9578129 C40.8,12.9080194 36.7292353,8.8 31.7207995,8.8 C26.7144154,8.8 22.641599,12.9080194 22.641599,17.9578129 Z M21.23817,35.2969524 C20.1519488,37.923093 17.1550946,39.1690117 14.5501334,38.0759918 C13.3483961,37.5718389 12.4410915,36.6482474 11.9176782,35.5469626 L14.8732914,36.7804842 C16.7943886,37.5863023 18.9984287,36.6689094 19.796988,34.7349459 C20.5980094,32.7989162 19.6892686,30.5756847 17.7691973,29.7698666 L14.7138668,28.495021 C15.8928292,28.0445894 17.2330628,28.0280598 18.4852743,28.5528746 C19.7477449,29.0818219 20.7272726,30.0777305 21.2463772,31.3505098 C21.7654818,32.6232892 21.76343,34.0283054 21.23817,35.2969524 Z M31.7207995,24.0609553 C28.3866298,24.0609553 25.6721027,21.3232399 25.6721027,17.9578129 C25.6721027,14.5950719 28.3866298,11.8565301 31.7207995,11.8565301 C35.057021,11.8565301 37.771548,14.5950719 37.771548,17.9578129 C37.771548,21.3232399 35.057021,24.0609553 31.7207995,24.0609553 Z M27.1883805,17.948515 C27.1883805,15.4167998 29.2237629,13.3634099 31.7310585,13.3634099 C34.2404058,13.3634099 36.2757882,15.4167998 36.2757882,17.948515 C36.2757882,20.4804368 34.2404058,22.531967 31.7310585,22.531967 C29.2237629,22.531967 27.1883805,20.4804368 27.1883805,17.948515 Z" fill="#000000"></path>
+</svg></a></span><button id="menu-btn" class="hdr-btn" title=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://www.ohmykreee.tk/faq/">FAQ</a></li>
+			<li><a href="https://www.ohmykreee.tk/ready-to/">Ready?</a></li>
+			<li><a href="https://www.ohmykreee.tk/posts/">Posts</a></li>
+			<li><a href="https://www.ohmykreee.tk/about-me/">About</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Jan 13, 2021</span></div>
+				<h1>Notes for Setting Up Back-end Server</h1>
+			</header>
+			<div class="content">
+				<hr>
+<h1 id="install-centos">Install CentOS</h1>
+<p>OS: CentOS 7 Minimal</p>
+<p>Summary:</p>
+<ol>
+<li>Date &amp; Time: Shanghai</li>
+<li>Network &amp; Hostname: hostname to <code>kserver.localdomain</code><br>
+If you want to change hostname later, use:</li>
+</ol>
+<pre><code>hostnamectl set-hostname AnythingYouLike.localdomain
+</code></pre><p>When installing:</p>
+<ol>
+<li>Set a root password</li>
+</ol>
+<hr>
+<h1 id="first-run--install-some-software">First run &amp; install some software</h1>
+<pre><code>yum -y update
+yum -y install vim
+yum -y install net-tools
+yum -y install git
+yum -y install unzip
+</code></pre><hr>
+<h1 id="set-up-openssh">Set up OpenSSH</h1>
+<pre><code>vim /etc/ssh/sshd_config
+</code></pre><p>Remove <code>#</code> in the following line:</p>
+<pre><code>Port 22
+ListenAddress 0.0.0.0
+ListenAddress ::
+PermitRootLogin yes
+</code></pre><p>Start and auto-run the SSH service.</p>
+<pre><code>systemctl enable sshd.service
+systemctl start sshd.service
+</code></pre><p>View the local address:</p>
+<pre><code>ifconfig -a
+</code></pre><hr>
+<h1 id="set-up-ap--soft-router">Set up AP &amp; soft router</h1>
+<pre><code>ref: https://www.osradar.com/building-your-own-wireless-access-point-on-top-of-centos7/
+</code></pre><p>Install the wireless-tools and hostapd.</p>
+<pre><code>yum -y install iw
+yum -y install epel-release
+yum -y install hostapd
+</code></pre><p>Config hostapd.</p>
+<pre><code>vim /etc/hostapd/hostapd.conf
+</code></pre><p>Edit the conf file.</p>
+<pre><code>interface=wlp7s0
+hw_mode=g
+channel=6
+ssid=K_server
+utf8_ssid=1
+country_code=CN
+bridge=br-AP
+</code></pre><p>Remove the <code>#</code> in the following lines:</p>
+<pre><code>wpa=3
+wpa_key_mgmt=WPA-PSK
+wpa_pairwise=TKIP
+rsn_pairwise=CCMP
+wpa_passphrase=YouPassHere
+</code></pre><p>Start and auto-run the hostapd</p>
+<pre><code>systemctl start hostapd.service
+systemctl enable hostapd.service
+</code></pre><p>Change zones.</p>
+<pre><code>firewall-cmd --permanent -zone=external --change-interface=enp1s0
+firewall-cmd --permanent -zone=internal --change-interface=???
+firewall-cmd --zone=external --add-masquerade --permanent
+firewall-cmd --set-default-zone=internal
+firewall-cmd --zone=internal --add-service=dns --permanent
+firewall-cmd --complete-reload
+</code></pre><p>Set up bridge.</p>
+<pre><code>nmcli con add con-name br-AP type bridge ifname br-AP autoconnect yes stp no ip4 192.168.6.1/24
+</code></pre><p>Set up dhcp.</p>
+<pre><code>yum install -y dhcp
+vim /etc/dhcp/dhcpd.conf
+</code></pre><p>Edit the conf file.</p>
+<pre><code>subnet 192.168.6.0 netmask 255.255.255.0 {
+	range dynamic-bootp 192.168.6.200 192.168.6.250;
+	option broadcast-address 192.168.6.255;
+	option domain-name-server 223.5.5.5, 223.6.6.6;
+	option routers 192.168.6.1;
+}
+</code></pre><p>Start and auto-run the dhcp</p>
+<pre><code>systemctl start dhcpd
+systemctl enable dhcpd
+</code></pre><p>Post-setup: make it more stable.</p>
+<pre><code>yum -y install haveged
+systemctl start havaged
+systemctl enable havaged
+</code></pre><hr>
+<h1 id="set-up-web-vmstats">Set up web-vmstats</h1>
+<pre><code>cd /usr/local/
+mkdir websocketd
+git clone https://github.com/joewalnes/web-vmstats
+</code></pre><p>Copy <code>websocketd.zip</code> to the folder <code>/usr/local/websocketd/</code> and unzip it:</p>
+<pre><code>unzip websocketd.zip
+</code></pre><p>Then create <code>webvmstats.service</code>.</p>
+<pre><code>vim /etc/systemd/system/webvmstats.service
+</code></pre><p>Add the following content to the file:</p>
+<pre><code>[Unit]
+Description=Web-vmstats
+
+[Service]
+ExecStart=/usr/local/websocketd/websocketd --port=8000 --staticdir=/usr/local/web-vmstats/web/ /usr/bin/vmstat -n 1
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><p>Reload, enable and start.</p>
+<pre><code>systemctl daemon-reload
+systemctl start webvmstats.service
+systemctl enable webvmstats.service
+</code></pre><p>Add port <code>8000</code> to the firewall.</p>
+<pre><code>firewall-cmd --add-port=8000/tcp --zone=external --permanent
+firewall-cmd --add-port=8000/tcp --zone=internal --permanent
+</code></pre><p>View status:</p>
+<pre><code>systemctl status webvmstats.service -l
+</code></pre><hr>
+<h1 id="set-up-zerotier">Set up Zerotier</h1>
+<p>Use the script to install Zerotier:</p>
+<pre><code>curl -s https://install.zerotier.com | sudo bash
+</code></pre><p>Join network:</p>
+<pre><code>zerotier-cli join XXXXXXX
+</code></pre><p>Start and auto-run ZeroTier.</p>
+<pre><code>systemctl start zerotier-one.service
+systemctl enable zerotier-one.service
+</code></pre><hr>
+<h1 id="set-up-frp">Set up FRP</h1>
+<p>穷！！！不整了！！！阿里云还我一个月学生机+无限次数续费！！</p>
+<hr>
+<h1 id="set-up-mumble-server">Set up mumble server</h1>
+<pre><code>ref: https://wiki.mumble.info/wiki/Install_CentOS7
+</code></pre><hr>
+<h1 id="set-up-minecraft-server">Set up Minecraft server</h1>
+<p>Install java:</p>
+<pre><code>yum install -y java-latest-openjdk.x86_64
+</code></pre><p>Upload the server.zip to the <code>/usr/local/mc_1_16_4</code></p>
+<pre><code>mkdir /opt/mc_1_16_4
+unzip server.zip
+</code></pre><p>Create <code>mcserver.service</code> by <code>vim /etc/systemd/system/mcserver.service</code></p>
+<pre><code>[Unit]
+Description=Minecraft Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStartPre=/bin/sleep 10
+ExecStart=/usr/bin/java -jar /usr/local/mc_1_16_4/fabric-server-launch.jar nogui
+WorkingDirectory=/usr/local/mc_1_16_4/
+
+[Install]
+WantedBy=multi-user.target
+</code></pre><p>Add port:</p>
+<pre><code>vim /etc/firewalld/services/minecraft.xml
+</code></pre><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;service&gt;
+        &lt;short&gt;Minecraft&lt;/short&gt;
+        &lt;description&gt;Minecraft Server&lt;/description&gt;
+        &lt;port protocol=&quot;tcp&quot; port=&quot;25565&quot; /&gt;
+        &lt;port protocol=&quot;udp&quot; port=&quot;25565&quot; /&gt;
+&lt;/service&gt;
+</code></pre><pre><code>vim /etc/firewalld/services/rcon.xml
+</code></pre><pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;service&gt;
+        &lt;short&gt;RCON&lt;/short&gt;
+        &lt;description&gt;Minecraft RCON&lt;/description&gt;
+        &lt;port protocol=&quot;tcp&quot; port=&quot;25577&quot; /&gt;
+        &lt;port protocol=&quot;udp&quot; port=&quot;25577&quot; /&gt;
+&lt;/service&gt;
+</code></pre><pre><code>firewall-cmd --permanent --add-service=minecraft --zone=internal
+firewall-cmd --permanent --add-service=minecraft --zone=external
+firewall-cmd --permanent --add-service=rcon --zone=internal
+firewall-cmd --complete-reload
+</code></pre><hr>
+<h1 id="set-up-ftp">Set up FTP</h1>
+<p>Install the ftp-daemon</p>
+<pre><code>yum -y install vsftpd
+</code></pre><p>Edit the conf file:</p>
+<pre><code>vim /etc/vsftpd/vsftpd.conf
+</code></pre><pre><code>local_enable=NO
+listen=YES
+</code></pre><p>Open port.</p>
+<pre><code>firewall-cmd --permanent --add-service=ftp --zone=internal
+firewall-cmd --permanent --add-service=ftp --zone=external
+</code></pre><p>Start and auto-run the service.</p>
+<pre><code>systemctl start vsftpd
+systemctl enable vsftpd
+</code></pre>
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://www.ohmykreee.tk/tags/notes">Notes</a></span>
+				</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2021-01-13 22:58 &#43;0800</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+			<a class="prev-post" href="https://www.ohmykreee.tk/posts/how-to-ues-ftp/">
+				<span class="post-nav-label">&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>如何使用FTP服务</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2021 <a href="https://www.ohmykreee.tk">Kreee Jiang</a> &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="https://www.ohmykreee.tk/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+	<script src="https://www.ohmykreee.tk/js/main.min.8f39f24808e9d0a9b02da58c2d2838da859dc0b7bdfadbdb1883aae8b6adacfe.js" integrity="sha256-jznySAjp0KmwLaWMLSg42oWdwLe9+tvbGIOq6LatrP4="></script>
+
+</body>
+
+</html>
