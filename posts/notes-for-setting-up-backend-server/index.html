@@ -7,23 +7,35 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="theme-color" content="#494f5c">
 	<meta name="msapplication-TileColor" content="#494f5c"><meta itemprop="name" content="Notes for Setting Up Back-end Server">
-<meta itemprop="description" content="Install CentOS OS: CentOS 7 Minimal Summary: Date &amp; Time: Shanghai Network &amp; Hostname: hostname to kserver.localdomain If you want to change hostname later, use: hostnamectl set-hostname AnythingYouLike.localdomain When installing: Set a root password First run &amp; install some software yum -y update yum -y install vim yum -y install net-tools yum -y install git yum -y install unzip Set up OpenSSH vim /etc/ssh/sshd_config Remove # in the following line:">
+<meta itemprop="description" content="Install CentOS OS: CentOS 7 Minimal
+Summary:
+ Date &amp; Time: Shanghai Network &amp; Hostname: hostname to kserver.localdomain
+If you want to change hostname later, use:  hostnamectl set-hostname AnythingYouLike.localdomain When installing:
+ Set a root password   First run &amp; install some software yum -y update yum -y install vim yum -y install net-tools yum -y install git yum -y install unzip  Set up OpenSSH vim /etc/ssh/sshd_config Remove # in the following line:">
 <meta itemprop="datePublished" content="2021-01-13T22:58:38+08:00" />
 <meta itemprop="dateModified" content="2021-01-13T22:58:38+08:00" />
-<meta itemprop="wordCount" content="534">
+<meta itemprop="wordCount" content="713">
 
 
 
 <meta itemprop="keywords" content="Notes," />
 <meta property="og:title" content="Notes for Setting Up Back-end Server" />
-<meta property="og:description" content="Install CentOS OS: CentOS 7 Minimal Summary: Date &amp; Time: Shanghai Network &amp; Hostname: hostname to kserver.localdomain If you want to change hostname later, use: hostnamectl set-hostname AnythingYouLike.localdomain When installing: Set a root password First run &amp; install some software yum -y update yum -y install vim yum -y install net-tools yum -y install git yum -y install unzip Set up OpenSSH vim /etc/ssh/sshd_config Remove # in the following line:" />
+<meta property="og:description" content="Install CentOS OS: CentOS 7 Minimal
+Summary:
+ Date &amp; Time: Shanghai Network &amp; Hostname: hostname to kserver.localdomain
+If you want to change hostname later, use:  hostnamectl set-hostname AnythingYouLike.localdomain When installing:
+ Set a root password   First run &amp; install some software yum -y update yum -y install vim yum -y install net-tools yum -y install git yum -y install unzip  Set up OpenSSH vim /etc/ssh/sshd_config Remove # in the following line:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.ohmykreee.tk/posts/notes-for-setting-up-backend-server/" />
 <meta property="article:published_time" content="2021-01-13T22:58:38+08:00" />
 <meta property="article:modified_time" content="2021-01-13T22:58:38+08:00" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Notes for Setting Up Back-end Server"/>
-<meta name="twitter:description" content="Install CentOS OS: CentOS 7 Minimal Summary: Date &amp; Time: Shanghai Network &amp; Hostname: hostname to kserver.localdomain If you want to change hostname later, use: hostnamectl set-hostname AnythingYouLike.localdomain When installing: Set a root password First run &amp; install some software yum -y update yum -y install vim yum -y install net-tools yum -y install git yum -y install unzip Set up OpenSSH vim /etc/ssh/sshd_config Remove # in the following line:"/>
+<meta name="twitter:description" content="Install CentOS OS: CentOS 7 Minimal
+Summary:
+ Date &amp; Time: Shanghai Network &amp; Hostname: hostname to kserver.localdomain
+If you want to change hostname later, use:  hostnamectl set-hostname AnythingYouLike.localdomain When installing:
+ Set a root password   First run &amp; install some software yum -y update yum -y install vim yum -y install net-tools yum -y install git yum -y install unzip  Set up OpenSSH vim /etc/ssh/sshd_config Remove # in the following line:"/>
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -199,8 +211,76 @@ firewall-cmd --add-port=8000/tcp --zone=internal --permanent
 systemctl enable zerotier-one.service
 </code></pre><hr>
 <h1 id="set-up-frp">Set up FRP</h1>
-<p>穷！！！不整了！！！阿里云还我一个月学生机+无限次数续费！！</p>
-<hr>
+<pre><code>mkdir /usr/local/frp
+</code></pre><p>copy the frp.zip to the new folder. Then unzip it.</p>
+<p>Edit the <code>frpc.ini</code> in the client-side. (Stupid error in [ftp]?)</p>
+<pre><code>[common]
+server_addr = ?.?.?.?
+server_port = 7000
+pool_count = 2
+authenticate_new_work_conns = true
+authentication_method = token
+token = balabalabalabalabalabala
+
+[minecraft01]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 25565
+remote_port = 25565
+
+[minecraft02]
+type = udp
+local_ip = 127.0.0.1
+local_port = 25565
+remote_port = 25565
+
+[murmur01]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 64738
+remote_port = 64738
+
+[murmur02]
+type = udp
+local_ip = 127.0.0.1
+local_port = 64738
+remote_port = 64738
+
+[ftp01]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 20
+remote_port = 20
+
+[ftp02]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 21
+remote_port = 21
+
+[webvmstat]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 8000
+remote_port = 8000
+</code></pre><p>Copy origin <code>.service</code> file and edit it.</p>
+<pre><code>cp /usr/local/frp/systemd/frpc.service /etc/systemd/system/
+vim /etc/systemd/system/frpc.service
+</code></pre><p><del>User=nobody</del></p>
+<p>On the server-side, edit the <code>frps.ini</code>.</p>
+<pre><code>[common]
+bind_addr = 0.0.0.0
+bind_port = 7000
+dashboard_addr = 0.0.0.0
+dashboard_port = 7500
+authentication_method = token
+authenticate_new_work_conns = true
+token = balabalabalabalabalabala
+dashboard_user = admin
+dashboard_pwd = admin
+</code></pre><p>Give permission:</p>
+<pre><code>chmod -R 700 /usr/local/frp/
+</code></pre><hr>
 <h1 id="set-up-mumble-server">Set up mumble server</h1>
 <pre><code>ref: https://wiki.mumble.info/wiki/Install_CentOS7
 </code></pre><hr>
@@ -210,6 +290,11 @@ systemctl enable zerotier-one.service
 </code></pre><p>Upload the server.zip to the <code>/usr/local/mc_1_16_4</code></p>
 <pre><code>mkdir /opt/mc_1_16_4
 unzip server.zip
+</code></pre><p>Create user:</p>
+<pre><code>groupadd -r minecraft
+useradd -r -g minecraft -m -d /var/lib/minecraft -s /sbin/nologin minecraft
+chown -R minecraft:minecraft /usr/local/mc_1_16_4
+chmod -R 0770 /usr/local/mc_1_16_4
 </code></pre><p>Create <code>mcserver.service</code> by <code>vim /etc/systemd/system/mcserver.service</code></p>
 <pre><code>[Unit]
 Description=Minecraft Server
@@ -217,6 +302,7 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
+User=minecraft
 ExecStartPre=/bin/sleep 10
 ExecStart=/usr/bin/java -jar /usr/local/mc_1_16_4/fabric-server-launch.jar nogui
 WorkingDirectory=/usr/local/mc_1_16_4/
