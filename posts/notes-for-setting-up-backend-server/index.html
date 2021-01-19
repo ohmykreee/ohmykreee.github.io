@@ -14,7 +14,7 @@ If you want to change hostname later, use:  hostnamectl set-hostname AnythingYou
  Set a root password   First run &amp; install some software yum -y update yum -y install vim yum -y install net-tools yum -y install git yum -y install unzip  Set up OpenSSH vim /etc/ssh/sshd_config Remove # in the following line:">
 <meta itemprop="datePublished" content="2021-01-13T22:58:38+08:00" />
 <meta itemprop="dateModified" content="2021-01-13T22:58:38+08:00" />
-<meta itemprop="wordCount" content="713">
+<meta itemprop="wordCount" content="717">
 
 
 
@@ -200,6 +200,8 @@ systemctl enable webvmstats.service
 firewall-cmd --add-port=8000/tcp --zone=internal --permanent
 </code></pre><p>View status:</p>
 <pre><code>systemctl status webvmstats.service -l
+</code></pre><p>Or:</p>
+<pre><code>journalctl -u webvmstats
 </code></pre><hr>
 <h1 id="set-up-zerotier">Set up Zerotier</h1>
 <p>Use the script to install Zerotier:</p>

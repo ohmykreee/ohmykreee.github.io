@@ -132,6 +132,8 @@ systemctl enable webvmstats.service
 firewall-cmd --add-port=8000/tcp --zone=internal --permanent
 </code></pre><p>View status:</p>
 <pre><code>systemctl status webvmstats.service -l
+</code></pre><p>Or:</p>
+<pre><code>journalctl -u webvmstats
 </code></pre><hr>
 <h1 id="set-up-zerotier">Set up Zerotier</h1>
 <p>Use the script to install Zerotier:</p>
