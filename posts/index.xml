@@ -54,6 +54,15 @@ systemctl start sshd.service
 </code></pre><p>View the local address:</p>
 <pre><code>ifconfig -a
 </code></pre><hr>
+<h1 id="set-up-serial-port">Set up Serial Port</h1>
+<p>Check if it is supported</p>
+<pre><code>dmesg |grep tty
+</code></pre><p>Edit <code>/etc/default/grub</code> and add:</p>
+<pre><code>GRUB_CMDLINE_LINUX_DEFAULT=&quot;console=tty0 console=ttyS0,9600&quot;
+</code></pre><p>Update the grub file:</p>
+<pre><code>grub2-mkconfig -o /boot/grub2/grub.cfg
+</code></pre><p>Reboot the machine.</p>
+<hr>
 <h1 id="set-up-ap--soft-router">Set up AP &amp; soft router</h1>
 <pre><code>ref: https://www.osradar.com/building-your-own-wireless-access-point-on-top-of-centos7/
 </code></pre><p>Install the wireless-tools and hostapd.</p>
@@ -133,7 +142,7 @@ firewall-cmd --add-port=8000/tcp --zone=internal --permanent
 </code></pre><p>View status:</p>
 <pre><code>systemctl status webvmstats.service -l
 </code></pre><p>Or:</p>
-<pre><code>journalctl -u webvmstats
+<pre><code>journalctl -e -u webvmstats
 </code></pre><hr>
 <h1 id="set-up-zerotier">Set up Zerotier</h1>
 <p>Use the script to install Zerotier:</p>
@@ -191,6 +200,12 @@ type = tcp
 local_ip = 127.0.0.1
 local_port = 21
 remote_port = 21
+
+[ftppasv]
+type = udp
+local_ip = 127.0.0.1
+local_port = 20000-23333
+remote_port = 20000-23333
 
 [webvmstat]
 type = tcp
@@ -271,13 +286,44 @@ firewall-cmd --complete-reload
 </code></pre><p>Edit the conf file:</p>
 <pre><code>vim /etc/vsftpd/vsftpd.conf
 </code></pre><pre><code>local_enable=NO
+anonymous_enable=YES
+write_enable=YES
+anon_upload_enable=YES
 listen=YES
+</code></pre><p>Create a folder for uploading and change the permission:</p>
+<pre><code>mkdir /var/ftp/UploadArea
+chown -R ftp:ftp /var/ftp/UploadArea
+chmod -R 777 /var/ftp/UploadArea
+</code></pre><p>Can ban users from logging in by adding name in <code>/etc/vsftpd/user_list</code></p>
+<p>Change Selinux settings:</p>
+<pre><code>getsebool -a | grep ftp
+setsebool -P ftpd_anon_write on
+setsebool -P ftpd_full_access on
+</code></pre><p>Specify the Pasv-port by adding in <code>/etc/vsftpd/vsftpd.conf</code></p>
+<pre><code>pasv_min_port=20000
+pasv_max_port=23333
 </code></pre><p>Open port.</p>
 <pre><code>firewall-cmd --permanent --add-service=ftp --zone=internal
 firewall-cmd --permanent --add-service=ftp --zone=external
 </code></pre><p>Start and auto-run the service.</p>
 <pre><code>systemctl start vsftpd
 systemctl enable vsftpd
+</code></pre><hr>
+<h1 id="ntp-enable">NTP enable</h1>
+<p>Install the ntp-daemon.</p>
+<pre><code>yum install -y ntp
+</code></pre><p>Edit the conf file.</p>
+<pre><code>vim /etc/ntp.conf
+</code></pre><p>Add the following line:</p>
+<pre><code>server ntp.ntsc.ac.cn
+server cn.ntp.org.cn
+SYNC_HWCLOCK=yes
+</code></pre><p>Start and auto-run the servie.</p>
+<pre><code>systemctl start ntpd
+systemctl enable ntpd
+</code></pre><p>View stats:</p>
+<pre><code>ntpstat
+ntpq -p
 </code></pre>]]></content>
 		</item>
 		
