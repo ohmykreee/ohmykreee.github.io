@@ -8,6 +8,15 @@
     <language>zh-cn</language>
     <lastBuildDate>Wed, 13 Jan 2021 22:58:38 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.tk/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>❤ Donate ❤</title>
+      <link>https://www.ohmykreee.tk/donate/</link>
+      <pubDate>Mon, 01 Mar 2021 10:10:08 +0800</pubDate>
+      
+      <guid>https://www.ohmykreee.tk/donate/</guid>
+      <description>富婆，饿饿，饭饭.jpg 不求多，只求分担一点电费 + 20元30Gb30天的校园网费😢😢😢 并非强制性捐款。（除恶意炸服外）欢迎大家来白嫖。 （考虑</description>
+    </item>
+    
+    <item>
       <title>Notes for Setting Up Back-end Server</title>
       <link>https://www.ohmykreee.tk/posts/notes-for-setting-up-backend-server/</link>
       <pubDate>Wed, 13 Jan 2021 22:58:38 +0800</pubDate>
@@ -91,15 +100,6 @@ Prepare to enter a new dimension!</description>
       
       <guid>https://www.ohmykreee.tk/faq/</guid>
       <description>这是什么？ 这是一个被托管在 Github Pages 上的网页，主要提供网页应用和连接服务器指南。 如需了解其他连接服务器的方法，请参考 FAQ/如何连接至服务器 部分。</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>https://www.ohmykreee.tk/about-me/</link>
-      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.ohmykreee.tk/about-me/</guid>
-      <description>我是Kreee Bilibili UP主页 Steam主页 干饭人，干饭魂，干饭人都是仌！</description>
     </item>
     
   </channel>
