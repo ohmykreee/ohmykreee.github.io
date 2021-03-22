@@ -14,7 +14,7 @@ If you want to change hostname later, use:  hostnamectl set-hostname AnythingYou
  Set a root password   First run &amp; install some software yum -y update yum -y install vim yum -y install net-tools yum -y install git yum -y install unzip yum -y install wget  Enable yum-cron yum install -y yum-cron Make it receive security update automatically:">
 <meta itemprop="datePublished" content="2021-01-13T22:58:38+08:00" />
 <meta itemprop="dateModified" content="2021-01-13T22:58:38+08:00" />
-<meta itemprop="wordCount" content="893">
+<meta itemprop="wordCount" content="909">
 
 
 
@@ -144,7 +144,12 @@ systemctl start sshd
 </code></pre><p>Update the grub file:</p>
 <pre><code>grub2-mkconfig -o /boot/grub2/grub.cfg
 </code></pre><p>Reboot the machine.</p>
-<hr>
+<p>Next, enable <code>serial-getty</code></p>
+<pre><code>cp /usr/lib/systemd/system/serial-getty@.service /etc/systemd/system/serial-getty@ttyS0.service
+systemctl daemon-reload
+systemctl start serial-getty@ttyS0.service
+systemctl enable serial-getty@ttyS0.service
+</code></pre><hr>
 <h1 id="set-up-ap--soft-router">Set up AP &amp; soft router</h1>
 <pre><code>ref: https://www.osradar.com/building-your-own-wireless-access-point-on-top-of-centos7/
 </code></pre><p>Install the wireless-tools and hostapd.</p>
@@ -318,8 +323,8 @@ dashboard_pwd = admin
 <h1 id="set-up-minecraft-server">Set up Minecraft server</h1>
 <p>Install java:</p>
 <pre><code>yum install -y java-latest-openjdk.x86_64
-</code></pre><p>Upload the server.zip to the <code>/usr/local/mc_1_16_4</code></p>
-<pre><code>mkdir /opt/mc_1_16_4
+</code></pre><p>Upload the server.zip to the <code>/usr/local/mc_1_16_4</code> or <code>/opt/mc_1_16_4</code></p>
+<pre><code>mkdir /usr/local/mc_1_16_4/mc_1_16_4
 unzip server.zip
 </code></pre><p>Create user:</p>
 <pre><code>groupadd -r minecraft
