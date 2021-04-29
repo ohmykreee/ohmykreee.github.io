@@ -2,35 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>A Kreee&#39;s Server</title>
-    <link>https://www.ohmykreee.tk/</link>
+    <link>https://www.ohmykreee.top/</link>
     <description>Recent content on A Kreee&#39;s Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 Mar 2021 15:44:08 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.tk/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Mar 2021 15:44:08 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.top/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker 学习小记</title>
-      <link>https://www.ohmykreee.tk/posts/docker-notes/</link>
+      <link>https://www.ohmykreee.top/posts/docker-notes/</link>
       <pubDate>Mon, 01 Mar 2021 15:44:08 +0800</pubDate>
       
-      <guid>https://www.ohmykreee.tk/posts/docker-notes/</guid>
+      <guid>https://www.ohmykreee.top/posts/docker-notes/</guid>
       <description>本来一开始不打算使用 Docker 来配置服务：虽然的确 Docker 能省下配置环境的麻烦，但是总觉得哪里不舒服（误）。 其实是因为服务器不是长时间运行的，会时不时关机</description>
     </item>
     
     <item>
       <title>❤ Donate ❤</title>
-      <link>https://www.ohmykreee.tk/donate/</link>
+      <link>https://www.ohmykreee.top/donate/</link>
       <pubDate>Mon, 01 Mar 2021 10:10:08 +0800</pubDate>
       
-      <guid>https://www.ohmykreee.tk/donate/</guid>
+      <guid>https://www.ohmykreee.top/donate/</guid>
       <description>富婆，饿饿，饭饭.jpg 不求多，只求分担一点电费 + 20元30Gb30天的校园网费😢😢😢 并非强制性捐款。（除恶意炸服外）欢迎大家来白嫖。 （考虑</description>
     </item>
     
     <item>
       <title>Notes for Setting Up Back-end Server</title>
-      <link>https://www.ohmykreee.tk/posts/notes-for-setting-up-backend-server/</link>
+      <link>https://www.ohmykreee.top/posts/notes-for-setting-up-backend-server/</link>
       <pubDate>Wed, 13 Jan 2021 22:58:38 +0800</pubDate>
       
-      <guid>https://www.ohmykreee.tk/posts/notes-for-setting-up-backend-server/</guid>
+      <guid>https://www.ohmykreee.top/posts/notes-for-setting-up-backend-server/</guid>
       <description>Install CentOS OS: CentOS 7 Minimal
 Summary:
  Date &amp;amp; Time: Shanghai Network &amp;amp; Hostname: hostname to kserver.localdomain
@@ -40,64 +40,64 @@ If you want to change hostname later, use:  hostnamectl set-hostname AnythingYou
     
     <item>
       <title>如何使用FTP服务</title>
-      <link>https://www.ohmykreee.tk/posts/how-to-ues-ftp/</link>
+      <link>https://www.ohmykreee.top/posts/how-to-ues-ftp/</link>
       <pubDate>Mon, 04 Jan 2021 21:49:54 +0800</pubDate>
       
-      <guid>https://www.ohmykreee.tk/posts/how-to-ues-ftp/</guid>
+      <guid>https://www.ohmykreee.top/posts/how-to-ues-ftp/</guid>
       <description>目录 在电脑上使用 在手机上使用 在电脑上使用 有两种方式： 直接在系统文件管理器处输入 ftp://IP地址或者域名 在浏览器中直接输入： ftp://用</description>
     </item>
     
     <item>
       <title>如何下载并安装Mumble</title>
-      <link>https://www.ohmykreee.tk/posts/how-to-install-mumble/</link>
+      <link>https://www.ohmykreee.top/posts/how-to-install-mumble/</link>
       <pubDate>Mon, 04 Jan 2021 09:55:15 +0800</pubDate>
       
-      <guid>https://www.ohmykreee.tk/posts/how-to-install-mumble/</guid>
+      <guid>https://www.ohmykreee.top/posts/how-to-install-mumble/</guid>
       <description>目录 安装到电脑 安装到手机 安装到电脑 点击 此处 前往下载页面。 在截图中红框内可选择对应操作系统，并下载安装包。 以下演示内容系统为 Windows 10 x64， Mumble 版本</description>
     </item>
     
     <item>
       <title>!!Unfinshed!!</title>
-      <link>https://www.ohmykreee.tk/unfinshed/</link>
+      <link>https://www.ohmykreee.top/unfinshed/</link>
       <pubDate>Sun, 03 Jan 2021 23:30:22 +0800</pubDate>
       
-      <guid>https://www.ohmykreee.tk/unfinshed/</guid>
+      <guid>https://www.ohmykreee.top/unfinshed/</guid>
       <description>讨厌，都被客官您给看光了(ノω&amp;lt;。)ノ))☆.。</description>
     </item>
     
     <item>
       <title>进阶使用服务</title>
-      <link>https://www.ohmykreee.tk/posts/advanced-connect/</link>
+      <link>https://www.ohmykreee.top/posts/advanced-connect/</link>
       <pubDate>Sun, 03 Jan 2021 22:39:28 +0800</pubDate>
       
-      <guid>https://www.ohmykreee.tk/posts/advanced-connect/</guid>
+      <guid>https://www.ohmykreee.top/posts/advanced-connect/</guid>
       <description>由于众所周知的原因，服主并不推荐各位使用该网页提供的在线服务使用服务器所提供的服务，而是强烈推荐自行准备相应客户端并访问相应服务。 关于如何下</description>
     </item>
     
     <item>
       <title>Ready To Open a New Dimension?🌌</title>
-      <link>https://www.ohmykreee.tk/ready-to/</link>
+      <link>https://www.ohmykreee.top/ready-to/</link>
       <pubDate>Sun, 03 Jan 2021 22:18:54 +0800</pubDate>
       
-      <guid>https://www.ohmykreee.tk/ready-to/</guid>
+      <guid>https://www.ohmykreee.top/ready-to/</guid>
       <description>该页面所列连接方法均为使用域名连接。 强烈建议使用客户端而非网页应用使用以下服务。详情请参考文章： 进阶使用服务 首次打开网页应用，加载时间可能会</description>
     </item>
     
     <item>
       <title>如何下载并使用ZeroTier</title>
-      <link>https://www.ohmykreee.tk/posts/how-to-use-zerotier/</link>
+      <link>https://www.ohmykreee.top/posts/how-to-use-zerotier/</link>
       <pubDate>Sat, 02 Jan 2021 18:29:46 +0800</pubDate>
       
-      <guid>https://www.ohmykreee.tk/posts/how-to-use-zerotier/</guid>
+      <guid>https://www.ohmykreee.top/posts/how-to-use-zerotier/</guid>
       <description>目录 安装到电脑 安装到手机 安装到电脑 点击 此处 前往下载页面并下载相应系统安装包。 以下演示内容系统为 Windows 10 x64， ZeroTier 版本 1.6.2 。 直接开始安装即可。 启动 Zerotier</description>
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>https://www.ohmykreee.tk/posts/hello-world/</link>
+      <link>https://www.ohmykreee.top/posts/hello-world/</link>
       <pubDate>Sat, 02 Jan 2021 18:18:19 +0800</pubDate>
       
-      <guid>https://www.ohmykreee.tk/posts/hello-world/</guid>
+      <guid>https://www.ohmykreee.top/posts/hello-world/</guid>
       <description>Hello world my friends!
 Prepare to enter a new dimension!</description>
     </item>

@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Notes on A Kreee&#39;s Server</title>
-    <link>https://www.ohmykreee.tk/tags/notes/</link>
+    <link>https://www.ohmykreee.top/tags/notes/</link>
     <description>Recent content in Notes on A Kreee&#39;s Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 Mar 2021 15:44:08 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.tk/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Mar 2021 15:44:08 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.top/tags/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker 学习小记</title>
-      <link>https://www.ohmykreee.tk/posts/docker-notes/</link>
+      <link>https://www.ohmykreee.top/posts/docker-notes/</link>
       <pubDate>Mon, 01 Mar 2021 15:44:08 +0800</pubDate>
       
-      <guid>https://www.ohmykreee.tk/posts/docker-notes/</guid>
+      <guid>https://www.ohmykreee.top/posts/docker-notes/</guid>
       <description>本来一开始不打算使用 Docker 来配置服务：虽然的确 Docker 能省下配置环境的麻烦，但是总觉得哪里不舒服（误）。 其实是因为服务器不是长时间运行的，会时不时关机</description>
     </item>
     
     <item>
       <title>Notes for Setting Up Back-end Server</title>
-      <link>https://www.ohmykreee.tk/posts/notes-for-setting-up-backend-server/</link>
+      <link>https://www.ohmykreee.top/posts/notes-for-setting-up-backend-server/</link>
       <pubDate>Wed, 13 Jan 2021 22:58:38 +0800</pubDate>
       
-      <guid>https://www.ohmykreee.tk/posts/notes-for-setting-up-backend-server/</guid>
+      <guid>https://www.ohmykreee.top/posts/notes-for-setting-up-backend-server/</guid>
       <description>Install CentOS OS: CentOS 7 Minimal
 Summary:
  Date &amp;amp; Time: Shanghai Network &amp;amp; Hostname: hostname to kserver.localdomain
