@@ -9,7 +9,7 @@
 	<meta name="msapplication-TileColor" content="#494f5c"><meta itemprop="name" content="Python 期末编程题题库">
 <meta itemprop="description" content="从键盘输入三个数值，分别赋值给num1, num2和num3，并求它们的平均值。 1# by Kreee 2 3num1 = eval(input(&#39;请输入第一个数字："><meta itemprop="datePublished" content="2021-06-04T14:24:37&#43;08:00" />
 <meta itemprop="dateModified" content="2021-06-04T14:24:37&#43;08:00" />
-<meta itemprop="wordCount" content="9163">
+<meta itemprop="wordCount" content="9161">
 <meta itemprop="keywords" content="Notes," /><meta property="og:title" content="Python 期末编程题题库" />
 <meta property="og:description" content="从键盘输入三个数值，分别赋值给num1, num2和num3，并求它们的平均值。 1# by Kreee 2 3num1 = eval(input(&#39;请输入第一个数字：" />
 <meta property="og:type" content="article" />
@@ -813,17 +813,16 @@ d：日<br>
 <span class="ln"> 5</span>    <span class="k">for</span> <span class="n">factor</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">number</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
 <span class="ln"> 6</span>        <span class="k">if</span> <span class="n">number</span> <span class="o">%</span> <span class="n">factor</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
 <span class="ln"> 7</span>            <span class="k">return</span> <span class="bp">False</span>
-<span class="ln"> 8</span>            <span class="k">break</span>
-<span class="ln"> 9</span>        <span class="k">else</span><span class="p">:</span>
-<span class="ln">10</span>            <span class="k">return</span> <span class="bp">True</span>
+<span class="ln"> 8</span>        <span class="k">else</span><span class="p">:</span>
+<span class="ln"> 9</span>            <span class="k">return</span> <span class="bp">True</span>
+<span class="ln">10</span>
 <span class="ln">11</span>
-<span class="ln">12</span>
-<span class="ln">13</span><span class="n">getInput</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;请输入一个正整数：&#39;</span><span class="p">))</span>
-<span class="ln">14</span><span class="n">ifPrime</span> <span class="o">=</span> <span class="n">isPrime</span><span class="p">(</span><span class="n">getInput</span><span class="p">)</span>
-<span class="ln">15</span><span class="k">if</span> <span class="n">ifPrime</span><span class="p">:</span>
-<span class="ln">16</span>    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;正整数 {} 是质数。&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">getInput</span><span class="p">))</span>
-<span class="ln">17</span><span class="k">else</span><span class="p">:</span>
-<span class="ln">18</span>    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;正整数 {} 不是质数。&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">getInput</span><span class="p">))</span>
+<span class="ln">12</span><span class="n">getInput</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;请输入一个正整数：&#39;</span><span class="p">))</span>
+<span class="ln">13</span><span class="n">ifPrime</span> <span class="o">=</span> <span class="n">isPrime</span><span class="p">(</span><span class="n">getInput</span><span class="p">)</span>
+<span class="ln">14</span><span class="k">if</span> <span class="n">ifPrime</span><span class="p">:</span>
+<span class="ln">15</span>    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;正整数 {} 是质数。&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">getInput</span><span class="p">))</span>
+<span class="ln">16</span><span class="k">else</span><span class="p">:</span>
+<span class="ln">17</span>    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;正整数 {} 不是质数。&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">getInput</span><span class="p">))</span>
 </code></pre></div><hr>
 <ol start="28">
 <li>定义一个名为 <code>primeNumbers(number)</code> 的函数，参数为一个正整数。通过使用这个函数，能够输出小于number的所有素数，输出的时候，每行10个素数。在同一源文件中，使用键盘输入一个正整数，验证该函数的输出结果。</li>
