@@ -6,7 +6,16 @@
     <description>Recent content on A Kreee&#39;s Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 Mar 2021 15:44:08 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.top/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Jun 2021 14:24:37 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.top/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python 期末编程题题库</title>
+      <link>https://www.ohmykreee.top/posts/python-final-exam-questions/</link>
+      <pubDate>Fri, 04 Jun 2021 14:24:37 +0800</pubDate>
+      
+      <guid>https://www.ohmykreee.top/posts/python-final-exam-questions/</guid>
+      <description>从键盘输入三个数值，分别赋值给num1, num2和num3，并求它们的平均值。 1# by Kreee 2 3num1 = eval(input(&amp;#39;请输入第一个数字：</description>
+    </item>
+    
     <item>
       <title>Docker 学习小记</title>
       <link>https://www.ohmykreee.top/posts/docker-notes/</link>
@@ -90,16 +99,6 @@ If you want to change hostname later, use:  hostnamectl set-hostname AnythingYou
       
       <guid>https://www.ohmykreee.top/posts/how-to-use-zerotier/</guid>
       <description>目录 安装到电脑 安装到手机 安装到电脑 点击 此处 前往下载页面并下载相应系统安装包。 以下演示内容系统为 Windows 10 x64， ZeroTier 版本 1.6.2 。 直接开始安装即可。 启动 Zerotier</description>
-    </item>
-    
-    <item>
-      <title>Hello World</title>
-      <link>https://www.ohmykreee.top/posts/hello-world/</link>
-      <pubDate>Sat, 02 Jan 2021 18:18:19 +0800</pubDate>
-      
-      <guid>https://www.ohmykreee.top/posts/hello-world/</guid>
-      <description>Hello world my friends!
-Prepare to enter a new dimension!</description>
     </item>
     
   </channel>

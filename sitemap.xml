@@ -1,94 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://www.ohmykreee.top/</loc>
-    <lastmod>2021-03-01T15:44:08+08:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2021-06-04T14:24:37+08:00</lastmod>
+  </url><url>
+    <loc>https://www.ohmykreee.top/tags/notes/</loc>
+    <lastmod>2021-06-04T14:24:37+08:00</lastmod>
+  </url><url>
+    <loc>https://www.ohmykreee.top/posts/</loc>
+    <lastmod>2021-06-04T14:24:37+08:00</lastmod>
+  </url><url>
+    <loc>https://www.ohmykreee.top/posts/python-final-exam-questions/</loc>
+    <lastmod>2021-06-04T14:24:37+08:00</lastmod>
+  </url><url>
+    <loc>https://www.ohmykreee.top/tags/</loc>
+    <lastmod>2021-06-04T14:24:37+08:00</lastmod>
+  </url><url>
     <loc>https://www.ohmykreee.top/posts/docker-notes/</loc>
     <lastmod>2021-03-01T15:44:08+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ohmykreee.top/tags/notes/</loc>
-    <lastmod>2021-03-01T15:44:08+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ohmykreee.top/posts/</loc>
-    <lastmod>2021-03-01T15:44:08+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.ohmykreee.top/tags/</loc>
-    <lastmod>2021-03-01T15:44:08+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.ohmykreee.top/donate/</loc>
     <lastmod>2021-03-01T10:10:08+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.ohmykreee.top/posts/notes-for-setting-up-backend-server/</loc>
     <lastmod>2021-01-13T22:58:38+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.ohmykreee.top/tags/tutorials/</loc>
     <lastmod>2021-01-04T21:49:54+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.ohmykreee.top/posts/how-to-ues-ftp/</loc>
     <lastmod>2021-01-04T21:49:54+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.ohmykreee.top/posts/how-to-install-mumble/</loc>
     <lastmod>2021-01-04T09:55:15+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.ohmykreee.top/unfinshed/</loc>
     <lastmod>2021-01-03T23:30:22+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.ohmykreee.top/posts/advanced-connect/</loc>
     <lastmod>2021-01-03T22:39:28+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.ohmykreee.top/ready-to/</loc>
     <lastmod>2021-01-03T22:18:54+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.ohmykreee.top/posts/how-to-use-zerotier/</loc>
     <lastmod>2021-01-02T18:29:46+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.ohmykreee.top/posts/hello-world/</loc>
     <lastmod>2021-01-02T18:18:19+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.ohmykreee.top/faq/</loc>
     <lastmod>2021-01-02T16:21:52+08:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.ohmykreee.top/about-me/</loc>
     <lastmod>2021-01-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.ohmykreee.top/categories/</loc>
   </url>
-  
 </urlset>

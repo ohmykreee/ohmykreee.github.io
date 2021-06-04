@@ -6,7 +6,16 @@
     <description>Recent content in Notes on A Kreee&#39;s Server</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 01 Mar 2021 15:44:08 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.top/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 04 Jun 2021 14:24:37 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.top/tags/notes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python 期末编程题题库</title>
+      <link>https://www.ohmykreee.top/posts/python-final-exam-questions/</link>
+      <pubDate>Fri, 04 Jun 2021 14:24:37 +0800</pubDate>
+      
+      <guid>https://www.ohmykreee.top/posts/python-final-exam-questions/</guid>
+      <description>从键盘输入三个数值，分别赋值给num1, num2和num3，并求它们的平均值。 1# by Kreee 2 3num1 = eval(input(&amp;#39;请输入第一个数字：</description>
+    </item>
+    
     <item>
       <title>Docker 学习小记</title>
       <link>https://www.ohmykreee.top/posts/docker-notes/</link>
