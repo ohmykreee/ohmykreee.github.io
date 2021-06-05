@@ -1206,7 +1206,7 @@ ntpq -p
 </ol>
 <p><img src="/images/how-to-use-ftp-01.jpg" alt=""></p>
 <ol start="2">
-<li>在浏览器中直接输入： ftp://<code>用户名，默认Anonymous</code>:<code>密码，默认留空</code>@<code>IP地址或者域名</code>:<code>端口，默认21</code>/ 。例如 <code>ftp://Anonymous:@ct4.ohmykreee.tk:21/</code></li>
+<li>在浏览器中直接输入： ftp://<code>用户名，默认Anonymous</code>:<code>密码，默认留空</code>@<code>IP地址或者域名</code>:<code>端口，默认21</code>/ 。例如 <code>ftp://Anonymous:@ct4.ohmykreee.top:21/</code></li>
 </ol>
 <hr>
 <h1 id="在手机上使用">在手机上使用</h1>
