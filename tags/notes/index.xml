@@ -13,7 +13,7 @@
       <pubDate>Fri, 04 Jun 2021 14:24:37 +0800</pubDate>
       
       <guid>https://www.ohmykreee.top/posts/python-final-exam-questions/</guid>
-      <description>从键盘输入三个数值，分别赋值给num1, num2和num3，并求它们的平均值。 1# by Kreee 2 3num1 = eval(input(&amp;#39;请输入第一个数字：</description>
+      <description>从键盘输入三个数值，分别赋值给num1, num2和num3，并求它们的平均值。 1 2 3 4 5 6 7 8 # by Kreee num1 = eval(input(&amp;#39;请输</description>
     </item>
     
     <item>
