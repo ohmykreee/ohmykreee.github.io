@@ -61,12 +61,12 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
     url = "https://space.bilibili.com/361507684"
 	
   [[params.social]]
-    name = "github"
-    url = "https://github.com/ohmykreee"
+    name = "steam"
+    url = "https://steamcommunity.com/id/kreeejiang/"
 	
   [[params.social]]
-    name = "qq"
-    url = "https://support.qq.com/products/330937/"
+    name = "github"
+    url = "https://github.com/ohmykreee"
 
 [menu]
 
