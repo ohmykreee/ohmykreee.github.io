@@ -10,7 +10,7 @@ draft: false
  
 **并非强制性捐款。（除恶意炸服外）欢迎大家来白嫖。**
 
-![](/images/donate.jpg)
+![](/images/donate.png)
 
 -----
 # （非实时）捐赠名单
