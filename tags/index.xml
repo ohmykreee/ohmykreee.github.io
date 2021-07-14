@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on A Kreee&#39;s Server</title>
+    <link>https://www.ohmykreee.top/tags/</link>
+    <description>Recent content in Tags on A Kreee&#39;s Server</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Fri, 04 Jun 2021 14:24:37 +0800</lastBuildDate><atom:link href="https://www.ohmykreee.top/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Notes</title>
+      <link>https://www.ohmykreee.top/tags/notes/</link>
+      <pubDate>Fri, 04 Jun 2021 14:24:37 +0800</pubDate>
+      
+      <guid>https://www.ohmykreee.top/tags/notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorials</title>
+      <link>https://www.ohmykreee.top/tags/tutorials/</link>
+      <pubDate>Mon, 04 Jan 2021 21:49:54 +0800</pubDate>
+      
+      <guid>https://www.ohmykreee.top/tags/tutorials/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
