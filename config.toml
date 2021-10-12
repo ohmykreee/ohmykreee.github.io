@@ -36,7 +36,7 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
   # images = [""]
   themeColor = "#494f5c"
 
-  homeSubtitle = "累了，卷不动了（指做仰卧起坐）"
+  homeSubtitle = "年久失修，请移步博客： blog.ohmykreee.top"
   footerCopyright = ' &#183; <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
   bgImg = "images/background.jpg"  # Homepage background-image URL
 
@@ -71,24 +71,29 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
 [menu]
 
   [[menu.main]]
+    name = "→ 请移步博客 ←"
+    url = "https://blog.ohmykreee.top/"
+    weight = 1
+
+  [[menu.main]]
     name = "FAQ"
     url = "/faq/"
-    weight = 1
+    weight = 2
 
   [[menu.main]]
     name = "Posts"
     url = "/posts/"
-    weight = 2
+    weight = 3
 	
   [[menu.main]]
     name = "About"
     url = "https://blog.ohmykreee.top/page/about/"
-    weight = 3
+    weight = 4
 	
   [[menu.main]]
     name = "❤ ❤ ❤"
     url = "/donate/"
-    weight = 4
+    weight = 5
 
 [markup]
   [markup.highlight]
@@ -103,3 +108,8 @@ enableEmoji = true  # Shorthand emojis in content files - https://gohugo.io/func
     noClasses = true
     style = "monokai"
     tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xhtml = false
